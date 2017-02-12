@@ -21,11 +21,11 @@ careBnB is a web application inspired by airBnB built using Ruby on Rails and Re
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[wireframes]: /wireframes
+[components]: /component-hierarchy.md
+[sample-state]: /sample-state.md
+[api-endpoints]: /api-endpoints.md
+[schema]: /schema.md
 
 ##Implementation Timeline
 
@@ -49,7 +49,7 @@ careBnB is a web application inspired by airBnB built using Ruby on Rails and Re
 
 **Objective:** Add more css to make page look prettier
 
-###- [ ]Bonus Features (TBD)
+###- [ ] Bonus Features (TBD)
 
 - [ ] Review
 - [ ] Messaging
