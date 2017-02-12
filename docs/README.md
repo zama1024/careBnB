@@ -1,46 +1,55 @@
-careBnB
+#careBnB
+
 careBnB production link:
 
-Minimum Viable Product
+##Minimum Viable Product
 
 careBnB is a web application inspired by airBnB built using Ruby on Rails and React/Redux. Even though the main idea is same as Airbnb, the only difference is that a portion(decided by the host) of the rent will go towards charity(decided by the guest). By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
- Hosting on Heroku
- New account creation, login, and guest/demo login
- Apartment/Housing listings creation
- Booking an apartment/housing
- Google-map Integration
- Production README sample
-Design Docs
+ - [ ]Hosting on Heroku
+ - [ ]New account creation, login, and guest/demo login
+ - [ ]Apartment/Housing listings creation
+ - [ ]Booking an apartment/housing
+ - [ ]Google-map Integration
+ - [ ]Production README sample
 
-View Wireframes
-React Components
-API endpoints
-DB schema
-Sample State
-Implementation Timeline
+##Design Docs
 
-Phase 1: Backend setup and Front End User Authentication (2 days)
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
 
-Objective: Functioning rails project with front-end Authentication
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema]: docs/schema.md
 
-Phase 2: Listing Model, API, and components (2 days)
+##Implementation Timeline
 
-Objective: Listing belongs to a host(user) and can be created, and destroyed through the API.
+###Phase 1: Backend setup and Front End User Authentication (2 days)
 
-Phase 3: Listings Search (2 Days)
+**Objective:** Functioning rails project with front-end Authentication
 
-Objective: Users can search listings based on location. Search process incorporates google maps API.
+###Phase 2: Listing Model, API, and components (2 days)
 
-Phase 4: Bookings (2 days)
+**Objective:** Listing belongs to a host(user) and can be created, and destroyed through the API.
 
-Objective: Booking belongs to a listing and a user that can be created, read, edited and destroyed through the API.
+###Phase 3: Listings Search (2 Days)
 
-Phase 6: - More CSS!(1 day)
+**Objective:** Users can search listings based on location. Search process incorporates google maps API.
 
-Objective: Add more css to make page look prettier
+###Phase 4: Bookings (2 days)
 
-Bonus Features (TBD)
+**Objective:** Booking belongs to a listing and a user that can be created, read, edited and destroyed through the API.
 
-Review
-Messaging
+###Phase 5: - More CSS!(1 day)
+
+**Objective:** Add more css to make page look prettier
+
+###- [ ]Bonus Features (TBD)
+
+- [ ]Review
+- [ ]Messaging
