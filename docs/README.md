@@ -49,7 +49,7 @@ careBnB is a web application inspired by airBnB built using Ruby on Rails and Re
 
 **Objective:** Add more css to make page look prettier
 
-###- [ ] Bonus Features (TBD)
+###Bonus Features (TBD)
 
 - [ ] Review
 - [ ] Messaging
