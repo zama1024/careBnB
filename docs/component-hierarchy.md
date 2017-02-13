@@ -10,6 +10,9 @@
 **Navbar/HeaderContainer**
   - Navbar
 
+**ListingFormContainer**
+  - NewListingForm
+
 **ListingsSearchResultsContainer**
  - ListingsSearchResults
 
@@ -40,6 +43,7 @@
 | "/home" | "SearchFormContainer" |
 | "/home" | "FooterContainer" |
 | "/home" | "HeaderContainer" |
+| "/home/newListing" | "ListingFormContainer" |
 | "/home/listings" | "ListingsSearchResultsContainer" |
 | "/home/listings/:listingId/" | "ListingShowContainer" |
 | "/home/listings/:listingId/" | "BookingFormContainer" |
