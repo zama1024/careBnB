@@ -31,6 +31,12 @@
 **FooterContainer**
   - Footer
 
+**ReviewFormContainer**
+  - ReviewForm
+
+**ReviewsContainer**
+  - Reviews
+
 
 
 ## Routes
@@ -47,4 +53,6 @@
 | "/home/listings" | "ListingsSearchResultsContainer" |
 | "/home/listings/:listingId/" | "ListingShowContainer" |
 | "/home/listings/:listingId/" | "BookingFormContainer" |
+| "/home/listings/:listingId/" | "ReviewFormContainer" |
+| "/home/listings/:listingId/" | "ReviewsContainer" |
 | "/home/bookings" | "BookingContainer" |

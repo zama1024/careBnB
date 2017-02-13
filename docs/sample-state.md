@@ -43,5 +43,14 @@
       chosenCharityOrg = "Blind care charity organization NYC"
     }
   },
+
+  reviews: {
+    1: {
+      authorId: 1,
+      listingId: 1,
+      rating: 5,
+      body: "Awesome Listing!"
+    }
+  },
 }
 ```

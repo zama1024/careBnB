@@ -49,3 +49,14 @@
   - Update booking information(Approve/Deny) for a particular listing
 - `DELETE /api/lisitngs/:id/bookings/:id`
   - User can cancel a booking
+
+### Reviews
+
+- `GET /api/listings/:id/reviews`
+  - Show all reviews for a particular listing
+- `POST /api/lisitngs/:id/reviews`
+  - Create a review for a particular listing
+- `PATCH /api/lisitngs/:id/reviews/:id`
+  - Edit review for a particular listing
+- `DELETE /api/lisitngs/:id/reviews/:id`
+  - User can delete a review
