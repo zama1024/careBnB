@@ -1,13 +1,24 @@
 ul {
     list-style-type: none;
-    margin: 0;
     padding: 0;
+    height: 61px;
+    width: 1905px;
 }
+.link {
+    text-decoration: none;
+    border-color: #c4c4c4;
+    background: white;
+    color: #484848;
+}
+
+
 li {
     display: inline;
     margin-left: 50px;
-    text-decoration: none; 
+    border-color: #c4c4c4;
+    background: white;
 }
-li.logo{
-  margin-right: 1000px;
+
+li#logo{
+  margin-right: 1400px;
 }

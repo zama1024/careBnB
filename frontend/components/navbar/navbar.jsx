@@ -16,10 +16,10 @@ export default class navBar extends React.Component {
     }else {
       return(
         <ul className="navbar">
-          <li className="logo"><Link to='/'>{"CareBnB"}</Link></li>
-          <li><Link to='/'>Become a Host</Link></li>
-          <li><Link to='/'>Sign Up</Link></li>
-          <li><Link to='/'>Log In</Link></li>
+          <li id="logo"><Link to='/' className="link">{"CareBnB"}</Link></li>
+          <li><Link to='/' className="link">Become a Host</Link></li>
+          <li><Link to='/' className="link">Sign Up</Link></li>
+          <li><Link to='/' className="link">Log In</Link></li>
         </ul>
       );
     }
