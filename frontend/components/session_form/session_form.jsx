@@ -20,6 +20,10 @@ class SessionForm extends React.Component {
     this.redirectIfLoggedIn();
   }
 
+  componentDidMount(){
+    this.props.clearErrors();
+  }
+
   startUsernameAnimation(){
      this.clearFields();
 
@@ -103,6 +107,7 @@ class SessionForm extends React.Component {
 
   toggleForm(e){
     e.preventDefault();
+    this.props.clearErrors();
     if(this.state.formType === "login"){
       this.setState({formType: "signup"});
     }else {
