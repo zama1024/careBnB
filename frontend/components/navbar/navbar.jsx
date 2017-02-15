@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { authModal: false, formType: '' };
+    this.state = { showModal: false, formType: '' };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
 
-    this._logout = this._logout.bind(this);
+    this.logout = this.logout.bind(this);
 
     this.toListingForm = this.toListingForm.bind(this);
     this.toMyListings = this.toMyListings.bind(this);
@@ -26,15 +26,15 @@ class Nav extends React.Component {
   }
 
   openModal(type, demo) {
-    this.setState({ authModal: true, formType: type, demo: demo });
+    this.setState({ showModal: true, formType: type, demo: demo });
   }
 
   closeModal() {
-    this.setState({ authModal: false, demo: false });
+    this.setState({ showModal: false, demo: false });
   }
 
-  _logout() {
-    this.setState({ authModal: false, demo: false });
+  logout() {
+    this.setState({ showModal: false, demo: false });
     this.props.logout();
   }
 
@@ -71,45 +71,41 @@ class Nav extends React.Component {
           <a className="link">Become a Host</a>
           <a className="link" onClick={this.openModal.bind(this, 'signup', false)}>Sign Up</a>
           <a className="link" onClick={this.openModal.bind(this, 'login', false)}>Log In</a>
-          <a className="link" onClick={this.openModal.bind(this, 'login', true)}>Demo</a>
+          <a className="link" onClick={this.openModal.bind(this, 'login', false)}>Demo</a>
         </div>
-        <Modal isOpen={this.state.authModal}
+        <Modal isOpen={this.state.showModal}
           onRequestClose={this.closeModal.bind(this)}
-          style={authModalStyle}>
+          style={authModalStyle}
+          contentLabel="Example Modal">
           <SessionFormContainer formType={this.state.formType}
             closeModal={this.closeModal.bind(this)}
             toggleForm={this.toggleForm.bind(this)}
-            demo={this.state.demo}
-          />
+            demo={this.state.demo} />
         </Modal>
       </div>
     );
   }
 
-  personalGreeting() {
+  greeting() {
     return (
       <div className="nav-container">
         <div className="greeting-buttons-container">
-          <button onClick={this.toListingForm}>Become a Host</button>
-          <button onClick={this.toMyListings}>Listings</button>
-          <button onClick={this.toMyBookings}>Bookings</button>
-          <button onClick={this._logout}>Logout</button>
+          <a className="logo link" onClick={this.toHome.bind(this)}>CareBnB</a>
+          <a className="link" onClick={this.toListingForm}>Become a Host</a>
+          <a className="link" onClick={this.toMyListings}>Listings</a>
+          <a className="link" onClick={this.toMyBookings}>Bookings</a>
+          <a className="link" onClick={this.logout}>Logout</a>
         </div>
       </div>
     );
   }
 
-  greeting() {
+
+  render() {
     const currentUser = this.props.currentUser;
     const logout = this.props.logout;
 
-    return (
-      currentUser ? this.personalGreeting(currentUser, logout) : this.sessionLinks()
-    );
-  }
-
-  render() {
-    return this.greeting();
+    return currentUser ? this.greeting() : this.sessionLinks();
   }
 }
 

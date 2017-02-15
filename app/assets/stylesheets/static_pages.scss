@@ -1,21 +1,26 @@
 .nav-links {
-    list-style-type: none;
-    padding: 0;
-    height: 61px;
-    width: 100%;
+  box-sizing: border-box;
+  color:  rgb(72, 72, 72);
+  display:  block;
+  line-height:  40px;
+  width:  100%;
 }
+
 .link {
-    text-decoration: none;
-    border-color: #c4c4c4;
-    background: white;
-    color: #484848;
-    display: inline;
-    margin-left: 2%;
-    border-color: #c4c4c4;
-    background: white;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: normal;
-    font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  border-color: #c4c4c4;
+  background: white;
+  color: #484848;
+  display: inline;
+  margin-left: 2%;
+  border-color: #c4c4c4;
+  background: white;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+
 }
 
 //
@@ -30,5 +35,5 @@
 // }
 
 a.logo{
-  padding-right: 60%;
+  padding-right: 70%;
 }

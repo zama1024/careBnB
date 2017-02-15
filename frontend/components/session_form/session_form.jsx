@@ -6,7 +6,8 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      formType: this.props.formType
     };
     this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -59,7 +60,7 @@ class SessionForm extends React.Component {
   }
 
   clearFields(){
-   this.setState({fname: '', lname: '', email: '', password: ''});
+   this.setState({email: '', password: ''});
   }
 
   update(field) {
@@ -71,42 +72,71 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({ user });
+    if (user.formType === "signup") {
+      delete user.formType;
+      this.props.signup(user);
+    }else{
+      delete user.formType;
+      this.props.login(user);
+    }
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
-        ))}
-      </ul>
-    );
+    if(this.props.errors.base){
+      return(
+        <ul>
+          {this.props.errors.base.map((error, i) => (
+            <li key={`error-${i}`}>{error}</li>
+          ))}
+        </ul>
+      );
+    }else{
+      return(
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>{error}</li>
+          ))}
+        </ul>
+      );
+    }
+  }
+
+  toggleForm(e){
+    e.preventDefault();
+    if(this.state.formType === "login"){
+      this.setState({formType: "signup"});
+    }else {
+      this.setState({formType: "login"});
+    }
   }
 
   render() {
+    let care = "CARE";
+    let label = this.state.formType === "signup" ? "Sign Up" : "Log In";
+    let prompt = this.state.formType === "signup" ? "Already have a CareBnB account?" : "Don't have a CareBnB account?";
     return (
       <form onSubmit={this.handleSubmit} className="session-form-container">
         <div className="session-top">
-          <h1>Welcome to CareBnB!</h1>
+          <span id="greeting">We are glad to see that you<span id="care"> {care}</span></span>
         </div>
+        <hr></hr>
         {this.renderErrors()}
         <div className="session-form">
-          <input type="text"
+          <input placeholder="Email Address" className="inp" type="email"
             id='email'
-            placeholder="email"
             value={this.state.email}
             onChange={this.update("email")}/>
-          <input type="password"
+          <input className="inp" placeholder="Create a Password" type="password"
             id='password'
-            placeholder="Password"
             value={this.state.password}
             onChange={this.update("password")}/>
-          <input type="submit" value="Submit"
+          <input type="submit" value={label}
             className="button"/>
         </div>
+        <hr></hr>
+        <div id="prompt">{prompt}</div>
         <div className="session-bot">
-          <h2>Already have an account?</h2>
+          <div onClick={this.toggleForm.bind(this)} id="bot-butt">{label === "Sign Up" ? "Log In" : "Sign Up"}</div>
         </div>
       </form>
     );

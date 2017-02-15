@@ -1,3 +1,152 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+span#greeting {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  display: block;;
+  color: #484848;
+  margin-bottom: 5px;
+}
+
+div.session-top{
+  margin-bottom: 5px;
+  padding: 30px;
+}
+span#care {
+  color: #FF5A5F;
+}
+
+input.inp {
+  border: 1px solid #aaa;
+  border-color: rgb(170, 170, 170);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  color: #484848;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  height: 40px;
+  padding: 10px 35px 10px 10px;
+  width: 100%;
+}
+
+div.session-bot{
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #484848;
+  align-items: center;
+}
+
+.button {
+  margin-bottom: 10px;
+  align-items: flex-start;
+  background-attachment:  scroll;
+  background-clip:  border-box;
+  background-color: #ff5a5f;
+  background-size:  auto;
+  border-color:  rgb(255, 126, 130);
+  border-bottom-left-radius:  4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style:  solid;
+  border-bottom-width:  1px;
+  border-image-width: 1;
+  border-left-style:  solid;
+  border-left-width:  1px;
+  border-right-color:rgb(255, 126, 130);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius:  4px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  color:  rgb(255, 255, 255);
+  cursor: pointer;
+  display:  block;
+  font-family:  Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:  16px;
+  font-weight:  normal;
+  height: 64px;
+  letter-spacing: normal;
+  line-height:  22.88px;
+  padding: 20px;
+  text-align: center;
+  text-decoration:  none;
+  text-size-adjust: 100%;
+  vertical-align: middle;
+  white-space:  normal;
+  width:  100%;
+
+}
+
+div#bot-butt{
+  margin-bottom: 10px;
+  margin-top: 20px;
+  align-items: flex-start;
+  background-attachment:  scroll;
+  background-clip:  border-box;
+  background-color: white;
+  background-size:  auto;
+  border-color:  #ff5a5f;
+  border-bottom-left-radius:  4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style:  solid;
+  border-bottom-width:  1px;
+  border-image-width: 1;
+  border-left-style:  solid;
+  border-left-width:  1px;
+  border-right-color: rgb(255, 126, 130);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius:  4px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display:  block;
+  letter-spacing: normal;
+  padding: 10px;
+  text-align: center;
+  text-decoration:  none;
+  text-size-adjust: 100%;
+  white-space:  normal;
+  width:  30%;
+  justify-content:space-around;
+  font-family:  Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:  16px;
+  font-weight:  normal;
+  margin: auto;
+  color: #ff5a5f;
+
+}
+
+
+div#prompt {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  display: inline;
+  margin-left: 110px;
+  height: 50px;
+}
+
+
+
+hr {
+  display: block;
+  border-style: inset;
+  border-width: 1px;
+  border-top-color: rgb(220, 224, 224);
+  margin-bottom: 20px;
+}
