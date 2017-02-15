@@ -11,7 +11,6 @@
     "node": "4.1.1",
     "npm": "2.1.x"
   },
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "node_modules/.bin/webpack --watch",
@@ -35,6 +34,7 @@
     "babel-preset-react": "^6.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-modal": "^1.6.5",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.2",
     "redux": "^3.6.0",
