@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
   }
 
   startUsernameAnimation(){
-     this.clearFields();
+     this.setState({email: '', password: ''});
 
      const demoName = 'guest@email.com';
      let emailID = setInterval(() => {
@@ -63,9 +63,6 @@ class SessionForm extends React.Component {
    }
   }
 
-  clearFields(){
-   this.setState({email: '', password: ''});
-  }
 
   update(field) {
     return e => this.setState({
@@ -75,7 +72,7 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = this.state;
+    const user = Object.assign({},this.state);
     if (user.formType === "signup") {
       delete user.formType;
       this.props.signup(user);

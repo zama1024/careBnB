@@ -1,10 +1,11 @@
 .nav-links {
   box-sizing: border-box;
   color:  rgb(72, 72, 72);
-  display:  block;
-  line-height:  40px;
+  display:  inline-block;
   width:  100%;
+  height: auto;
   margin-bottom: 30px;
+  white-space: nowrap;
 }
 
 .link {
@@ -13,26 +14,30 @@
   border-color: #c4c4c4;
   background: white;
   color: #484848;
-  display: inline;
+  display: inline-block;
   margin-left: 2%;
   border-color: #c4c4c4;
   background: white;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: cursive,"Lasiver",Helvetica,Arial,sans-serif;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
+  white-space: nowrap;
 
 }
 
 span#logotag{
   font-family: "Snell Roundhand", cursive;
-  padding-right: 65%;
   font-weight: bolder;
   font-size: 20px;
 }
 
+a#bahost {
+  margin-left: 65%
+}
+
 .vid {
-  width: 80%;
+  width: 90%;
   height: 20%;
 }
 

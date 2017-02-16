@@ -47,7 +47,7 @@ class Nav extends React.Component {
   }
 
   toListingForm() {
-    hashHistory.push('/listing/new');
+    hashHistory.push('/listings/new');
   }
 
 
@@ -72,7 +72,7 @@ class Nav extends React.Component {
             </img>
             <span id="logotag">CareBnB</span>
           </div>
-          <a className="link">Become a Host</a>
+          <a id="bahost" className="link" onClick={this.openModal.bind(this, 'signup', false)}>Become a Host</a>
           <a className="link" onClick={this.openModal.bind(this, 'signup', false)}>Sign Up</a>
           <a className="link" onClick={this.openModal.bind(this, 'login', false)}>Log In</a>
           <a className="link" onClick={this.openModal.bind(this, 'login', true)}>Demo</a>
@@ -99,7 +99,7 @@ class Nav extends React.Component {
             </img>
             <span id="logotag">CareBnB</span>
           </div>
-          <a className="link">Become a Host</a>
+          <a id="bahost" className="link" onClick={this.toListingForm}>Become a Host</a>
           <a className="link" onClick={this.toMyListings}>Listings</a>
           <a className="link" onClick={this.toMyBookings}>Bookings</a>
           <a className="link" onClick={this.logout}>Logout</a>
