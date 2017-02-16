@@ -4,7 +4,11 @@ import NavBarContainer from './navbar/navbar_container';
 const App = ({ children }) => (
   <div>
     <NavBarContainer />
-    <h1>Care BnB</h1>
+    <div className="vidcontainer">
+      <video className="vid" autoPlay loop>
+        <source src={ window.videomp4 } type="video/mp4" />
+      </video>
+    </div>
     { children }
   </div>
 );

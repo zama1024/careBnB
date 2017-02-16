@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
   startUsernameAnimation(){
      this.clearFields();
 
-     const demoName = 'guest_user';
+     const demoName = 'guest@email.com';
      let emailID = setInterval(() => {
        document.getElementById('email').focus();
        let currLength = this.state.email.length;
@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
      } else{
        clearInterval(passwordID);
        const user = this.state;
-       this.props.processForm({ user });
+       this.props.login(user);
      }
    }, 100);
   }

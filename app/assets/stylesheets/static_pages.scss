@@ -4,6 +4,7 @@
   display:  block;
   line-height:  40px;
   width:  100%;
+  margin-bottom: 30px;
 }
 
 .link {
@@ -23,6 +24,22 @@
 
 }
 
+span#logotag{
+  font-family: "Snell Roundhand", cursive;
+  padding-right: 65%;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.vid {
+  width: 80%;
+  height: 20%;
+}
+
+div.vidcontainer {
+  text-align: center;
+}
+
 //
 // li {
 //     display: inline;
@@ -34,6 +51,23 @@
 //     font-size: 14px;
 // }
 
-a.logo{
-  padding-right: 70%;
+
+img#vid{
+  width: 25px;
+  height: 25px;;
+  padding-left: 30px;
+  padding-top: 10px;
+  display: inline;
+}
+#video_box{
+    float:left;
+}
+#video_overlays {
+  position:absolute;
+  float:left;
+  width:80%;
+  height:20%;
+  background-color:#000;
+  z-index:300000;
+  opacity: 0.4;
 }

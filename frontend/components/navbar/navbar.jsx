@@ -67,11 +67,15 @@ class Nav extends React.Component {
     return (
       <div className="nav-container">
         <div className="nav-links">
-          <a className="logo link" onClick={this.toHome.bind(this)}>CareBnB</a>
+          <div className="logo link" onClick={this.toHome.bind(this)}>
+            <img id="vid" src="http://www.appsunveiled.com/wp-content/uploads/2016/06/Airbnb-Logo.png">
+            </img>
+            <span id="logotag">CareBnB</span>
+          </div>
           <a className="link">Become a Host</a>
           <a className="link" onClick={this.openModal.bind(this, 'signup', false)}>Sign Up</a>
           <a className="link" onClick={this.openModal.bind(this, 'login', false)}>Log In</a>
-          <a className="link" onClick={this.openModal.bind(this, 'login', false)}>Demo</a>
+          <a className="link" onClick={this.openModal.bind(this, 'login', true)}>Demo</a>
         </div>
         <Modal isOpen={this.state.showModal}
           onRequestClose={this.closeModal.bind(this)}
@@ -89,9 +93,13 @@ class Nav extends React.Component {
   greeting() {
     return (
       <div className="nav-container">
-        <div className="greeting-buttons-container">
-          <a className="logo link" onClick={this.toHome.bind(this)}>CareBnB</a>
-          <a className="link" onClick={this.toListingForm}>Become a Host</a>
+        <div className="nav-links">
+          <div className="logo link" onClick={this.toHome.bind(this)}>
+            <img id="vid" src="http://www.appsunveiled.com/wp-content/uploads/2016/06/Airbnb-Logo.png">
+            </img>
+            <span id="logotag">CareBnB</span>
+          </div>
+          <a className="link">Become a Host</a>
           <a className="link" onClick={this.toMyListings}>Listings</a>
           <a className="link" onClick={this.toMyBookings}>Bookings</a>
           <a className="link" onClick={this.logout}>Logout</a>
