@@ -1,23 +1,20 @@
 import { connect } from 'react-redux';
-import Home from './home';
-import { fetchListings } from "../../actions/listing_actions";
+import ListingShow from './listing_show';
 
 const mapStateToProps = (state, ownProps) => {
   const newProps = {
     currentUser: state.session.currentUser,
-    listings: Object.keys(state.listings).map(id => state.listings[id])
+    listing: state.listings[ownProps.params.listingId]
   };
-
 
   return newProps;
 };
 
 
 const mapDispatchToProps = dispatch => ({
-  fetchListings: listings => dispatch(fetchListings(listings))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home);
+)(ListingShow);

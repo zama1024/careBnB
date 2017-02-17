@@ -6,4 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-User.create!({email:"guest@email.com", password:"password"})
+u1 = User.create!({email:"guest@email.com", password:"password"})
+Listing.destroy_all
+Listing.create!({  title: "Beautiful house in the heart of Houston",
+  description: "Beautiful big house",
+  host_id: u1.id,
+  lat: -180,
+  lng: 180,
+  daily_rate: 20,
+  donation_percentage: 20,
+  address: "18343 Dusty Terrace Ln.",
+  city: "Katy",
+  listing_photo_url: "https://cdn.wallpapersbuzz.com/image/4650/b_nice-house.jpg"})

@@ -7,14 +7,13 @@ export const createListing = (listing) => {
 };
 
 
-export const fetchListings = (listings) => {
+export const fetchListings = () => {
   return $.ajax({
     method: 'GET',
-    url: 'api/listings',
-    data: { listings }
+    url: 'api/listings'
   });
 };
-
+window.fetchListings = fetchListings;
 export const fetchListing = (id) => {
   return $.ajax({
     method: 'GET',

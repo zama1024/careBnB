@@ -5,7 +5,7 @@ import { CREATE_REVIEW,
 import merge from 'lodash/merge';
 
 const ListingsReducer = (state = {}, action) => {
-  Object.freeze(state)
+  Object.freeze(state);
   let newState = merge({}, state);
 
   switch(action.type) {

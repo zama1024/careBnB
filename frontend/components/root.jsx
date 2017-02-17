@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import ListingFormContainer from './listings/listing_form_container';
 import NavBarContainer from './navbar/navbar_container';
 import HomeContainer from './home/home_container';
+import ListingShowContainer from './listings/listing_show_container';
 
 const _ensureLoggedIn = (store) => {
    const currentUser = store.getState().session.currentUser;
@@ -19,6 +20,7 @@ const Root = ({ store }) => (
     <Router history={ hashHistory }>
       <Route path="/" component={ App }>
         <IndexRoute component={HomeContainer} />
+        <Route path="listings/:listingId" component={ ListingShowContainer} />
         <Route path="listings/new" component={ ListingFormContainer} />
       </Route>
     </Router>
