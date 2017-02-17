@@ -20,8 +20,8 @@ const Root = ({ store }) => (
     <Router history={ hashHistory }>
       <Route path="/" component={ App }>
         <IndexRoute component={HomeContainer} />
-        <Route path="listings/:listingId" component={ ListingShowContainer} />
         <Route path="listings/new" component={ ListingFormContainer} />
+        <Route path="listings/:listingId" component={ ListingShowContainer} />
       </Route>
     </Router>
   </Provider>
