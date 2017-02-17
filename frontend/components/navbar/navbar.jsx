@@ -67,15 +67,17 @@ class Nav extends React.Component {
     return (
       <div className="nav-container">
         <div className="nav-links">
-          <div className="logo link" onClick={this.toHome.bind(this)}>
+          <div id="logoContainer" className="logo link" onClick={this.toHome.bind(this)}>
             <img id="vid" src="http://www.appsunveiled.com/wp-content/uploads/2016/06/Airbnb-Logo.png">
             </img>
-            <span id="logotag">CareBnB</span>
           </div>
-          <a id="bahost" className="link" onClick={this.openModal.bind(this, 'signup', false)}>Become a Host</a>
-          <a className="link" onClick={this.openModal.bind(this, 'signup', false)}>Sign Up</a>
-          <a className="link" onClick={this.openModal.bind(this, 'login', false)}>Log In</a>
-          <a className="link" onClick={this.openModal.bind(this, 'login', true)}>Demo</a>
+          <div className="leftContainer">
+
+            <a id="bahost" className="link" onClick={this.openModal.bind(this, 'signup', false)}>Become a Host</a>
+            <a className="link" onClick={this.openModal.bind(this, 'signup', false)}>Sign Up</a>
+            <a className="link" onClick={this.openModal.bind(this, 'login', false)}>Log In</a>
+            <a className="link" onClick={this.openModal.bind(this, 'login', true)}>Demo</a>
+          </div>
         </div>
         <Modal isOpen={this.state.showModal}
           onRequestClose={this.closeModal.bind(this)}
@@ -97,12 +99,14 @@ class Nav extends React.Component {
           <div className="logo link" onClick={this.toHome.bind(this)}>
             <img id="vid" src="http://www.appsunveiled.com/wp-content/uploads/2016/06/Airbnb-Logo.png">
             </img>
-            <span id="logotag">CareBnB</span>
           </div>
-          <a id="bahost" className="link" onClick={this.toListingForm}>Become a Host</a>
-          <a className="link" onClick={this.toMyListings}>Listings</a>
-          <a className="link" onClick={this.toMyBookings}>Bookings</a>
-          <a className="link" onClick={this.logout}>Logout</a>
+          <div className="leftContainer">
+
+            <a id="bahost" className="link" onClick={this.toListingForm}>Become a Host</a>
+            <a className="link" onClick={this.toMyListings}>Listings</a>
+            <a className="link" onClick={this.toMyBookings}>Bookings</a>
+            <a className="link" onClick={this.logout}>Logout</a>
+          </div>
         </div>
       </div>
     );

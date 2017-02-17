@@ -3,17 +3,61 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .listing-form-container {
 
-  padding: 20px;
-  width: 33%
+  width: 80%;
 }
 
 #lfb {
   background-color: #008489;
-  border-color: #008489
+  border-color: #008489;
+  width: 50%;
+}
+
+#rhs{
+  width: 50%;
 }
 
 .greeting {
+  font-family: 'Caveat Brush', cursive;
   font-family: 'Open Sans', sans-serif;
   font-weight:100;
-  font-size: 20px;
+  font-size: 30px;
+  color: grey;
+}
+
+#leftside{
+  width: 40%;
+  margin-left: 10%;
+  float: left;
+}
+
+#backTag {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+#carebnb {
+  color: #ff5a5f;
+  font-size: 50px;
+  display: inline-flex;
+}
+
+div#background {
+  background: url("https://static1.squarespace.com/static/55c1d8bce4b081fdca9dc5fd/t/573c76938259b5b384b45f7e/1463580310514/Individuals.jpg?format=1500w");
+  height: 500px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  line-height:  150px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1000;
+}
+#holder{
+  margin-bottom: 40%;
+}
+
+#pagediv{
+  padding-top: 3%;
 }

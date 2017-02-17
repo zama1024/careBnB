@@ -4,8 +4,15 @@
   display:  inline-block;
   width:  100%;
   height: auto;
-  margin-bottom: 30px;
   white-space: nowrap;
+}
+.leftContainer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .link {
@@ -14,7 +21,6 @@
   border-color: #c4c4c4;
   background: white;
   color: #484848;
-  display: inline-block;
   margin-left: 2%;
   border-color: #c4c4c4;
   background: white;
@@ -23,6 +29,7 @@
   font-size: 20px;
   -webkit-font-smoothing: antialiased;
   white-space: nowrap;
+  background: transparent;
 
 }
 
@@ -30,10 +37,18 @@ span#logotag{
   font-family: "Snell Roundhand", cursive;
   font-weight: bolder;
   font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  float: left;
 }
 
 a#bahost {
   margin-left: 65%
+}
+
+.logo.link{
+  float: left;
+  width: 20%
 }
 
 .vid {

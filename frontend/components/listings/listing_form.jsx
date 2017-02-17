@@ -3,7 +3,6 @@ import { withRouter } from 'react-router';
 
 class ListingForm extends React.Component{
   constructor(props) {
-    debugger
     super(props);
     this.state = {
       title: "",
@@ -50,54 +49,62 @@ class ListingForm extends React.Component{
   }
 
   render() {
+    let carebnb = "CareBnB"
     let care = "CARE";
     let fakeOf = "of";
     let fakeIn = "in";
     return (
-      <div>
-        <span className="greeting">We are excited to add you to our list {fakeOf} awesome hosts!</span>
-        <span className="greeting">Please fill {fakeIn} the form below to become a host.</span>
-        <form onSubmit={this.handleSubmit} className="listing-form-container">
-
-          <div className="listing-top">
-            <span id="greeting">We are glad to see that you<span id="care"> {care}</span></span>
+      <div id="pagediv">
+        <div id="holder">
+          <div id="background">
+            <h1 id="backTag">Find your passions as a <h1 id="carebnb">{carebnb}</h1> host</h1>
           </div>
 
-          <div className="listing-form">
+        </div>
+        <div id="leftside">
+          <span className="greeting">We are excited to add you to our list {fakeOf} awesome hosts!</span>
+          <span className="greeting">Please fill {fakeIn} the form below to become a host.</span>
+          <form onSubmit={this.handleSubmit} className="listing-form-container">
 
-            <input placeholder="Title" className="inp" type="text"
-              id='title'
-              value={this.state.title}
-              onChange={this.update("title")}/>
+            <div className="listing-form">
 
-            <input placeholder="Description" className="inp" type="text"
-              id='description'
-              value={this.state.description}
-              onChange={this.update("description")}/>
+              <input placeholder="Title" className="inp" type="text"
+                id='title'
+                value={this.state.title}
+                onChange={this.update("title")}/>
 
-            <input placeholder="Daily Rate" className="inp" type="text"
-              id='daily_rate'
-              onChange={this.update("daily_rate")}/>
+              <input placeholder="Description" className="inp" type="text"
+                id='description'
+                value={this.state.description}
+                onChange={this.update("description")}/>
 
-            <input placeholder="Donation Percentage" className="inp" type="text"
-              id='donation_percentage'
-              onChange={this.update("donation_percentage")}/>
+              <input placeholder="Daily Rate" className="inp" type="text"
+                id='daily_rate'
+                onChange={this.update("daily_rate")}/>
 
-            <input placeholder="Street Address" className="inp" type="text"
-              id='address'
-              value={this.state.address}
-              onChange={this.update("address")}/>
+              <input placeholder="Donation Percentage" className="inp" type="text"
+                id='donation_percentage'
+                onChange={this.update("donation_percentage")}/>
 
-            <input placeholder="City" className="inp" type="text"
-              id='city'
-              value={this.state.city}
-              onChange={this.update("city")}/>
+              <input placeholder="Street Address" className="inp" type="text"
+                id='address'
+                value={this.state.address}
+                onChange={this.update("address")}/>
 
-            <input type="submit" value="Create Listing"
-              id="lfb" className="button"/>
-          </div>
-        </form>
+              <input placeholder="City" className="inp" type="text"
+                id='city'
+                value={this.state.city}
+                onChange={this.update("city")}/>
 
+              <input type="submit" value="Create Listing"
+                id="lfb" className="button"/>
+            </div>
+          </form>
+
+        </div>
+        <div>
+          <img id ="rhs" src="http://images.all-free-download.com/images/graphicthumb/sketch_urban_building_vector_573417.jpg"></img>
+        </div>
       </div>
     );
   }
