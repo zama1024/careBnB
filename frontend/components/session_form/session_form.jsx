@@ -106,9 +106,9 @@ class SessionForm extends React.Component {
     e.preventDefault();
     this.props.clearErrors();
     if(this.state.formType === "login"){
-      this.setState({formType: "signup"});
+      this.setState({email: '', password: '',formType: "signup"});
     }else {
-      this.setState({formType: "login"});
+      this.setState({email: '', password: '', formType: "login"});
     }
   }
 
