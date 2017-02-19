@@ -67,7 +67,7 @@ class Nav extends React.Component {
     return (
       <div className="nav-container">
         <div id="logoContainer" className="" onClick={this.toHome.bind(this)}>
-          <img id="vid" src="http://www.appsunveiled.com/wp-content/uploads/2016/06/Airbnb-Logo.png">
+          <img id="vid" src={window.logo}>
           </img>
         </div>
         <div id="search">
@@ -97,7 +97,7 @@ class Nav extends React.Component {
       <div className="nav-container">
         <div className="nav-links">
           <div className="logo link" onClick={this.toHome.bind(this)}>
-            <img id="vid" src="http://www.appsunveiled.com/wp-content/uploads/2016/06/Airbnb-Logo.png">
+            <img id="vid" src={window.logo}>
             </img>
           </div>
           <div className="leftContainer">

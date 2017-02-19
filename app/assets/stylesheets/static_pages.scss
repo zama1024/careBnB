@@ -19,6 +19,21 @@
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
+#greet{
+  width: 60%;
+  font-family: 'Roboto', sans-serif;
+  color: #484848;
+  font-size: 40px;
+  padding-left: 12%;
+  font-weight: bolder;
+  padding-top: 5%;
+  text-align: left;
+}
+
+#CareBnB{
+  font-family: 'Noto sans', sans-serif;
+  color: #FF5A5F;
+}
 #verybot{
   width: 80%;
   align-items: center;
@@ -60,7 +75,6 @@
 
 
 #footlhs {
-  margin-left: 35%;
   display: flex;
   align-content: flex-end;
   align-items: flex-end;
@@ -169,6 +183,7 @@ img#vid{
 #search input {
   height: 61px;
   width: 100%;
+  visibility: hidden;
 }
 
 hr {

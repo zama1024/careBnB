@@ -15,13 +15,20 @@ class Home extends React.Component {
 
 
   render() {
+    let fakeof = "of";
+    let fakefor = "for"
     let photos = this.props.listings.map(listing => (<img onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>));
     return(
       <div className="vidcontainer">
         <video className="vid" autoPlay loop>
           <source src={ window.videomp4 } type="video/mp4" />
         </video>
-        <div>
+        <div id="greet">
+
+          <span><span id="CareBnB">CareBnB </span>Book your home {fakefor} next vacation and be a part {fakeof} a greater cause.</span>
+        </div>
+      <div>
+
           <h1>Listings: </h1>
           {photos}
         </div>

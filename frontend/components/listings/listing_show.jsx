@@ -15,6 +15,9 @@ class ListingShow extends React.Component {
     if (!listing) {
       return <div>Loading...</div>;
       }
+    if (!listing.host){
+      return <div>Loading...</div>;
+    }
     return(
       <div>
         <div id="coverContainer">
@@ -67,6 +70,9 @@ class ListingShow extends React.Component {
           </div>
         </div>
         <hr></hr>
+        <div id="listingdetails">
+          <h4>About This Listing</h4>
+        </div>
       </div>
   );
   }
