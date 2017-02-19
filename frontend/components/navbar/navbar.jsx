@@ -93,21 +93,24 @@ class Nav extends React.Component {
   }
 
   greeting() {
+    debugger
     return (
       <div className="nav-container">
-        <div className="nav-links">
-          <div className="logo link" onClick={this.toHome.bind(this)}>
-            <img id="vid" src={window.logo}>
-            </img>
-          </div>
-          <div className="leftContainer">
-
-            <a id="bahost" className="link" onClick={this.toListingForm}>Become a Host</a>
-            <a className="link" onClick={this.toMyListings}>Listings</a>
-            <a className="link" onClick={this.toMyBookings}>Bookings</a>
-            <a className="link" onClick={this.logout}>Logout</a>
-          </div>
+        <div id="logoContainer" className="" onClick={this.toHome.bind(this)}>
+          <img id="vid" src={window.logo}>
+          </img>
         </div>
+        <div id="search">
+          <input type="text" />
+        </div>
+        <div className="leftContainer">
+
+          <a id="bahost" className="link" onClick={this.toListingForm}>Become a Host</a>
+          <a className="link" onClick={this.toMyListings}>Listings</a>
+          <a className="link" onClick={this.toMyBookings}>Bookings</a>
+          <a className="link" onClick={this.logout}>Logout</a>
+        </div>
+        <img id="navimg" src={this.props.currentUser.profile_pic_url} />
       </div>
     );
   }

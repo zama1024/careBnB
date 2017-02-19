@@ -33,7 +33,7 @@ class ListingShow extends React.Component {
               <span className="headerLink">Location</span>
             </div>
             <hr id="greenhr"></hr>
-            <hr id="regularhr"></hr>
+            <hr className="regularhr"></hr>
           </div>
         </div>
         <div id="showPageSummary">
@@ -52,15 +52,15 @@ class ListingShow extends React.Component {
             <div id="icons">
               <div className="icon">
                 <img className="iconsize" src={window.guestNumber}/>
-                <span className="sumfont">4 Guests</span>
+                <span className="sumfont">{listing.max_guests} Guests</span>
               </div>
               <div className="icon">
                 <img className="iconsize" src={window.room}/>
-                <span className="sumfont">1 Bedroom</span>
+                <span className="sumfont">{listing.num_bedroom} Bedroom</span>
               </div>
               <div className="icon">
                 <img className="iconsize" src={window.bed}/>
-                <span className="sumfont">2 Beds</span>
+                <span className="sumfont">{listing.listing_beds} Beds</span>
               </div>
               <div className="icon">
                 <img className="iconsize" src={window.donation}/>
@@ -72,7 +72,67 @@ class ListingShow extends React.Component {
         <hr></hr>
         <div id="listingdetails">
           <h4>About This Listing</h4>
+          <hr></hr>
+          <div className="boxcontainer">
+            <div className="boxitem first">
+              The space
+            </div>
+            <div className="boxitem middle">
+              <span className="disblock">Accommodates: <span className="val"> {listing.max_guests} </span> </span>
+              <span className="disblock">Bathrooms: <span className="val"> {listing.num_bathroom} </span></span>
+              <span className="disblock">Bedrooms: <span className="val"> {listing.num_bedroom} </span></span>
+              <span className="disblock">Beds: <span className="val"> {listing.listing_beds} </span></span>
+            </div>
+            <div className="boxitem last">
+              <span className="disblock">Check In:  <span className="val">{listing.check_in}</span> </span>
+              <span className="disblock">Check_out:  <span className="val">{listing.check_out}</span></span>
+              <span className="disblock">Property Type:  <span className="val">{listing.property_type}</span></span>
+              <span className="disblock">Room Type:  <span className="val">{listing.listing_type.split(" ")[0 ]}</span></span>
+            </div>
+          </div>
+          <hr></hr>
+          <div className="boxcontainer">
+            <div className="boxitem first">
+              Amenities
+            </div>
+            <div className="boxitem middle">
+              <span className="disblock amenity"><img className="amenitieslogo" src={window.kitchen} /><span className="val">  Kitchen </span> </span>
+              <span className="disblock amenity"><img className="amenitieslogo" src={window.internet} /><span className="val">  Internet </span> </span>
+              <span className="disblock amenity"><img className="amenitieslogo" src={window.tv} /><span className="val">  Internet </span> </span>
+              <span className="disblock amenity"><img className="amenitieslogo" src={window.ac} /><span className="val">  Air Conditioner </span> </span>
+            </div>
+
+            <div className="boxitem last">
+              <span className="disblock amenity"><img className="amenitieslogo" src={window.parking} /><span className="val">  Free Parking </span> </span>
+              <span className="disblock amenity"><img className="amenitieslogo" src={window.family} /><span className="val">  Family/Kid Friendly </span> </span>
+
+            </div>
+          </div>
+          <hr></hr>
+          <div className="boxcontainer">
+            <div className="boxitem first">
+              Prices
+            </div>
+            <div className="boxitem middle">
+              <span className="disblock">Service Fee: <span className="val"> ${listing.service_fee} </span> </span>
+              <span className="disblock">Weekly Discount: <span className="val"> {listing.weekly_discount}% </span></span>
+            </div>
+            <div className="boxitem last">
+              <span className="disblock">Monthly Discount: <span className="val"> {listing.monthly_discount}% </span></span>
+              <span className="disblock">Cancellation: <span className="val"> Not Allowed </span></span>
+            </div>
+          </div>
+          <hr></hr>
+          <div className="boxcontainer">
+            <div id="desctag" className="boxitem first">
+              Description
+            </div>
+            <div id="listdesc" className="middle">
+              <span>{listing.description}</span>
+            </div>
+          </div>
         </div>
+        <hr></hr>
       </div>
   );
   }

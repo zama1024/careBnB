@@ -10,22 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216171023) do
+ActiveRecord::Schema.define(version: 20170219202300) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "listings", force: :cascade do |t|
-    t.integer "host_id",                                  null: false
-    t.string  "title",               default: "",         null: false
-    t.text    "description",         default: "",         null: false
-    t.float   "lat",                 default: 37.09024,   null: false
-    t.float   "lng",                 default: -95.712891, null: false
-    t.integer "daily_rate",          default: 0,          null: false
-    t.integer "donation_percentage", default: 0,          null: false
-    t.string  "address",             default: "",         null: false
-    t.string  "city",                default: "",         null: false
+    t.integer "host_id",                                      null: false
+    t.string  "title",               default: "",             null: false
+    t.text    "description",         default: "",             null: false
+    t.float   "lat",                 default: 37.09024,       null: false
+    t.float   "lng",                 default: -95.712891,     null: false
+    t.integer "daily_rate",          default: 0,              null: false
+    t.integer "donation_percentage", default: 0,              null: false
+    t.string  "address",             default: "",             null: false
+    t.string  "city",                default: "",             null: false
     t.string  "listing_photo_url"
+    t.integer "max_guests",          default: 1
+    t.integer "num_bedroom",         default: 1
+    t.string  "listing_type",        default: "Private Room"
+    t.integer "listing_beds",        default: 1
+    t.integer "num_bathroom",        default: 1
+    t.string  "check_in",            default: "2PM"
+    t.string  "check_out",           default: "12PM"
+    t.string  "property_type",       default: "House"
+    t.integer "service_fee",         default: 0
+    t.integer "weekly_discount",     default: 0
+    t.integer "monthly_discount",    default: 0
     t.index ["host_id"], name: "index_listings_on_host_id", using: :btree
   end
 
