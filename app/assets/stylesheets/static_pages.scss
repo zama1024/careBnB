@@ -1,12 +1,17 @@
 .nav-links {
+  height: 61px;
   box-sizing: border-box;
   color:  rgb(72, 72, 72);
   display:  inline-block;
   width:  100%;
-  height: auto;
   white-space: nowrap;
 }
+.nav-container{
+  display: flex;
+  height: 61px;
+}
 .leftContainer {
+  padding-top: 1.5%;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -85,7 +90,7 @@
   border-color: #c4c4c4;
   background: white;
   color: #484848;
-  margin-left: 2%;
+  margin-left: 15%;
   border-color: #c4c4c4;
   background: white;
   font-family: 'Noto Sans', sans-serif;
@@ -106,13 +111,9 @@ span#logotag{
   float: left;
 }
 
-a#bahost {
-  margin-left: 65%
-}
 
 .logo.link{
   float: left;
-  width: 20%
 }
 
 .vid {
@@ -139,8 +140,7 @@ div.vidcontainer {
 img#vid{
   width: 25px;
   height: 25px;;
-  padding-left: 30px;
-  padding-top: 10px;
+
   display: inline;
 }
 #video_box{
@@ -155,7 +155,21 @@ img#vid{
   z-index:300000;
   opacity: 0.4;
 }
-
+#logoContainer{
+  width: 68px;
+  text-align: center;
+  margin: 0px;
+  padding-top: 20px;
+}
+#search{
+  height: 61px;
+  width: 63%;
+  margin-right: 13%;
+}
+#search input {
+  height: 61px;
+  width: 100%;
+}
 
 hr {
   display: block;
