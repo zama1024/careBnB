@@ -51,13 +51,42 @@ body {
 #city{
   font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased !important;
-  color: #767676
+  color: #767676;
+  float:left;
+  margin-right: 3%;
+  font-size: 14px;
+}
+.rating{
+  color:#007090;
+  font-size: 13px;
+
 }
 #bulpoints{
   padding-left: 5%;
 }
+.iconsize{
+  width: 20%;
+  display: block;
+}
 
-#showPageSummary img {
+#sumtop{
+  margin-bottom:2%;
+}
+.sumfont{
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
+  color: #767676;
+
+}
+.icon{
+  width: 15%;
+}
+#icons{
+  display: flex;
+}
+
+#userphoto img {
   width: 90px;
   height: 90px;
   border-radius: 50%;

@@ -39,9 +39,30 @@ class ListingShow extends React.Component {
             <span>{listing.host.fname}</span>
           </div>
           <div id="bulpoints">
-            <div>
+            <div id="sumtop">
               <h2 id="listingtitle">{listing.title}</h2>
               <span id="city">{listing.city}, United States</span>
+              <div className="rating">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆ 155</span>
+              </div>
+            </div>
+            <div id="icons">
+              <div className="icon">
+                <img className="iconsize" src={window.guestNumber}/>
+                <span className="sumfont">4 Guests</span>
+              </div>
+              <div className="icon">
+                <img className="iconsize" src={window.room}/>
+                <span className="sumfont">1 Bedroom</span>
+              </div>
+              <div className="icon">
+                <img className="iconsize" src={window.bed}/>
+                <span className="sumfont">2 Beds</span>
+              </div>
+              <div className="icon">
+                <img className="iconsize" src={window.donation}/>
+                <span className="sumfont">{listing.donation_percentage}%</span>
+              </div>
             </div>
           </div>
         </div>
