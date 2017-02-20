@@ -16,7 +16,7 @@ class Home extends React.Component {
 
   render() {
     let fakeof = "of";
-    let fakefor = "for"
+    let fakefor = "for";
     let photos = this.props.listings.map(listing => (<img onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>));
     return(
       <div className="vidcontainer">

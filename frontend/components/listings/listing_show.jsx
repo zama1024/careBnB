@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import ReviewShowContainer from '../reviews/review_show_container';
 
 
 class ListingShow extends React.Component {
@@ -11,6 +12,7 @@ class ListingShow extends React.Component {
   }
 
   render() {
+
     const listing = this.props.listing;
     if (!listing) {
       return <div>Loading...</div>;
@@ -18,6 +20,10 @@ class ListingShow extends React.Component {
     if (!listing.host){
       return <div>Loading...</div>;
     }
+    if (!listing.reviews){
+      return <div>Loading...</div>;
+    }
+
     return(
       <div>
         <div id="coverContainer">
@@ -133,6 +139,7 @@ class ListingShow extends React.Component {
           </div>
         </div>
         <hr></hr>
+        <ReviewShowContainer listing={listing}/>
       </div>
   );
   }

@@ -9,8 +9,12 @@ class Api::ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.create!(listing_params)
-    render :show
+    @listing = Listing.new(listing_params)
+    if @listing.save
+      render :show
+    else
+      render json: { base: ["Invalid entry, please try again"] }, status: 422
+    end
   end
 
   def listing_params

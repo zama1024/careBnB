@@ -93,7 +93,6 @@ class Nav extends React.Component {
   }
 
   greeting() {
-    debugger
     return (
       <div className="nav-container">
         <div id="logoContainer" className="" onClick={this.toHome.bind(this)}>

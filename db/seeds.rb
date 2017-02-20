@@ -8,7 +8,7 @@
 User.destroy_all
 u1 = User.create!({email:"guest@email.com", password:"password", fname: "Joey", lname:"Tribbiani", profile_pic_url: "https://s-media-cache-ak0.pinimg.com/originals/99/e2/3f/99e23f41edfc1f46199433023a3db074.jpg"})
 Listing.destroy_all
-Listing.create!({  title: "Beautiful house in the heart of Houston",
+l1 = Listing.create!({  title: "Beautiful house in the heart of Houston",
   description: "Ielirev numeya secih ne. Pie zetuvas he tehalor tapac dat ale tepe otin ayunupoh? Seso noced reruyu yonot, icey ruv vibocer agaceg sosedi. Sen ahiset nesed ris pib wusosos! Lala riesa het ucos seyole ci. Pecuro dicenan gicot? Nira wesur siesisor ril edetuviw denile. Mewoci rime nideno mu tehehar rore pedoci baseri. Arihe da wenino esesitec tehire da gese gol, igo lir se elaye vewinir dilati mirota. Sabarep eworap cari enir alarawec acanag serisa.
 
 Pu omahe notek retanal. Otowo teniwap si, deyoto tepie ca elariemin salito nayate ril lis rac nupetu. Isota amerinex femisuc! Ne tibu ge ra eceted xerade ni? Hinoma cana pes rirife vie bekabat ca geyita. Lovag naveh esi roba tur cisexu itoriteb.
@@ -36,3 +36,30 @@ Te cadie dur wuruve ibe ebotet nele eve. Elu nigedew til ceco la nuni, eri yo te
   weekly_discount: 10,
   monthly_discount: 15
   })
+
+Review.destroy_all
+Review.create!({
+  accuracy_rating: 4,
+  communication_rating: 5,
+  cleanliness_rating: 4,
+  location_rating: 5,
+  checkin_rating: 4,
+  value_rating: 3,
+  description: "Setapie ne nir cupalom. Tog rotaral conew, vi sacera derar ye. Digaba digeyop kadolim! Ciey reroy miti iebip elera le zaxitid otitunah ba. Xaxiegie idil dogep useses areni vicace neparen, ocekocal oday yo ni row vel abise selim hi sobik. Oyetelay cec teli riesi. Peser eca unietosa depe rive.",
+  review_helpfulness: 0,
+  listing_id: l1.id,
+  author_id: u1.id
+  })
+
+Review.create!({
+  accuracy_rating: 4,
+  communication_rating: 5,
+  cleanliness_rating: 4,
+  location_rating: 5,
+  checkin_rating: 4,
+  value_rating: 3,
+  description: "Rienag cipen no lireper ro nequp. Lepugi ciebe tabit tolena docetum gusero nila. Data topudam daware sine nale dipenat aca, enece vubihi lopihien! Tiera lalasa ucin ranal.",
+  review_helpfulness: 0,
+  listing_id: l1.id,
+  author_id: u1.id
+})

@@ -1,0 +1,90 @@
+// Place all the styles related to the api/reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.stars{
+  width: 19px;
+  height: 19px;
+}
+.smallstars{
+  width: 15px;
+  height: 15px;
+}
+
+#stargroup{
+  padding: 3.5%;
+  width: 100%;
+  height: 100%;
+}
+
+#reviewstag{
+  float: left;
+  margin-right: 5%;
+}
+
+.starItem{
+  font-family: "Novo sans", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  display: block;
+
+}
+
+.reviewsDesc{
+  font-family: "Noto sans", sans-serif;
+  padding-left: 7%;
+    font-size: 14px;
+    font-weight: 100;
+    color: #484848;
+    -webkit-font-smoothing: antialiased !important;
+    display: flex;
+}
+#summary{
+  padding-bottom: 6%;
+}
+#deschr{
+  color: #dce0e0;
+width: auto;
+}
+.reviewsDesc img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-right: 10%;
+
+}
+#helpfulness{
+  border: 1px solid #484848;
+  -webkit-font-smoothing: antialiased !important;
+  color: #484848;
+  width: 20%;
+  text-align: center;
+  height: 16%;
+  font-family: "Noto sans", sans-serif;
+  font-size: 12px;
+  border-bottom-left-radius:  4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius:  4px;
+  border-top-right-radius: 4px;
+  margin-top: 10%;
+  margin-left: 45%;
+  cursor: pointer;
+}
+#desc{
+  display: block;
+  padding-bottom: 4%;
+}
+#date{
+  font-family: "Noto sans", sans-serif;
+  margin-top: 10%;
+    font-size: 13px;
+    font-weight: 100;
+    color: #484848;
+    -webkit-font-smoothing: antialiased !important;
+    display: inline;
+}
+#helpline{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 4%;
+}

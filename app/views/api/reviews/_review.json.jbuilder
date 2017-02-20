@@ -1,0 +1,10 @@
+json.extract! review, :id, :accuracy_rating,
+  :communication_rating,
+  :cleanliness_rating,
+  :location_rating,
+  :checkin_rating,
+  :value_rating,
+  :description,
+  :review_helpfulness,
+  :author_id,
+  :listing_id

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170219202300) do
+ActiveRecord::Schema.define(version: 20170219231605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,23 @@ ActiveRecord::Schema.define(version: 20170219202300) do
     t.integer "weekly_discount",     default: 0
     t.integer "monthly_discount",    default: 0
     t.index ["host_id"], name: "index_listings_on_host_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "accuracy_rating",      default: 0
+    t.integer  "communication_rating", default: 0
+    t.integer  "cleanliness_rating",   default: 0
+    t.integer  "location_rating",      default: 0
+    t.integer  "checkin_rating",       default: 0
+    t.integer  "value_rating",         default: 0
+    t.text     "description",          default: ""
+    t.integer  "review_helpfulness",   default: 0
+    t.integer  "listing_id",                        null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "author_id",                         null: false
+    t.index ["author_id"], name: "index_reviews_on_author_id", using: :btree
+    t.index ["listing_id"], name: "index_reviews_on_listing_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
