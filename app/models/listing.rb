@@ -10,4 +10,13 @@ class Listing < ActiveRecord::Base
   class_name: "Review",
   foreign_key: :listing_id,
   primary_key: :id
+
+  def is_available?(start_date, end_date)
+    self.bookings.each do |booking|
+      if booking.start_date <= end_date && start_date <= booking.end_date
+        return false
+      end
+    end
+    true
+  end
 end

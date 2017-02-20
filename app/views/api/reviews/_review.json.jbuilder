@@ -7,4 +7,5 @@ json.extract! review, :id, :accuracy_rating,
   :description,
   :review_helpfulness,
   :author_id,
-  :listing_id
+  :listing_id,
+  :created_at

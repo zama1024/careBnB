@@ -1,10 +1,29 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import Modal from 'react-modal';
+import { authModalStyle } from '../../util/modal_styles';
+import ReviewFormContainer from './review_form_container';
 
 class ReviewShow extends React.Component{
-  componentDidMount(){
-    this.props.fetchReviews(this.props.listing.id);
+  constructor(props){
+    super(props);
+    this.state = {
+      showModal: false
+    };
   }
+
+  incrementHelpfulness(review){
+
+    return () => {
+      review.review_helpfulness += 1;
+      this.props.updateReview({review});
+    };
+  }
+
+  componentDidMount(){
+    this.props.fetchReviews();
+  }
+
   makeStars(starsNum, type){
     let classname = type ? "stars" : "smallstars";
     let tealStarNum = Math.round(starsNum);
@@ -18,8 +37,21 @@ class ReviewShow extends React.Component{
     }
     return stars;
   }
+
+  openModal(type, demo) {
+    this.setState({ showModal: true });
+  }
+
+  closeModal() {
+    this.setState({ showModal: false });
+  }
+
   render(){
-    let reviews = this.props.listing.reviews;
+    let reviews = this.props.reviews;
+    let keys = Object.keys(reviews)
+    keys = keys.slice(0,keys.length - 1);
+
+    if (!keys.length) return null;
 
     let accuracyRating = 0;
     let communicationRating = 0;
@@ -28,24 +60,29 @@ class ReviewShow extends React.Component{
     let checkinRating = 0;
     let valueRating = 0;
     let reviewsDesc = [];
-    for (var i = 0; i < reviews.length; i++) {
-      accuracyRating += reviews[i].accuracy_rating;
-      communicationRating += reviews[i].communication_rating;
-      cleanlinessRating += reviews[i].cleanliness_rating;
-      locationRating += reviews[i].location_rating;
-      checkinRating += reviews[i].checkin_rating;
-      valueRating += reviews[i].value_rating;
+    for (var i = 0; i < keys.length; i++) {
+      let el = keys[i];
+      accuracyRating += reviews[el].accuracy_rating;
+      communicationRating += reviews[el].communication_rating;
+      cleanlinessRating += reviews[el].cleanliness_rating;
+      locationRating += reviews[el].location_rating;
+      checkinRating += reviews[el].checkin_rating;
+      valueRating += reviews[el].value_rating;
+      let author = reviews[el].author;
       reviewsDesc.push(
         <div>
           <div className="reviewsDesc">
-            <img src="https://0.academia-photos.com/7021490/2719491/3167051/s200_farshid.zaman.jpg" />
-            <div>
-              <span id="desc">{reviews[i].description}</span>
-              <div id="helpline">
+            <div id="reviewimage">
+              <img src={author.profile_pic_url} />
+              <span>{author.fname}</span>
 
-                <span id="date">{reviews[i].created_at}</span>
-                <div id="helpfulness">
-                  <span>Helpful | {reviews[i].review_helpfulness}</span>
+            </div>
+            <div>
+              <span id="desc">{reviews[el].description}</span>
+              <div id="helpline">
+                <span id="date">{(reviews[el].created_at).slice(0,10)}</span>
+                <div id="helpfulness" onClick={ this.incrementHelpfulness(reviews[el])}>
+                  <span>Helpful | {reviews[el].review_helpfulness}</span>
                 </div>
               </div>
               <hr id="deschr"></hr>
@@ -55,14 +92,13 @@ class ReviewShow extends React.Component{
       );
     }
 
-    let accuracyAvg = accuracyRating / reviews.length;
-    let communicationAvg = communicationRating / reviews.length;
-    let cleanlinessAvg = cleanlinessRating / reviews.length;
-    let locationAvg = locationRating / reviews.length;
-    let checkinAvg = checkinRating / reviews.length;
-    let valueAvg = valueRating / reviews.length;
-
-    let rating = (accuracyRating + communicationRating + cleanlinessRating + locationRating + checkinRating + valueRating)/6.0/reviews.length;
+    let accuracyAvg = accuracyRating / keys.length;
+    let communicationAvg = communicationRating / keys.length;
+    let cleanlinessAvg = cleanlinessRating / keys.length;
+    let locationAvg = locationRating / keys.length;
+    let checkinAvg = checkinRating / keys.length;
+    let valueAvg = valueRating / keys.length;
+    let rating = (accuracyRating + communicationRating + cleanlinessRating + locationRating + checkinRating + valueRating)/6.0/keys.length;
     let ratingStars = this.makeStars(rating, "rating");
     let communicationStars = this.makeStars(communicationAvg);
     let cleanlinessStars = this.makeStars(cleanlinessAvg);
@@ -72,7 +108,7 @@ class ReviewShow extends React.Component{
     let valueStars = this.makeStars(valueAvg);
     return(
       <div id="listingdetails">
-        <h4 id="reviewstag">{reviews.length} Reviews</h4>
+        <h4 id="reviewstag">{keys.length} Reviews</h4>
         <h4 id="stargroup">{ratingStars}</h4>
         <hr></hr>
         <div id="summary" className="boxcontainer">
@@ -93,6 +129,18 @@ class ReviewShow extends React.Component{
         <div>
           {reviewsDesc}
         </div>
+        <div id= "buttonholder">
+          <h3>Want to leave a Review?</h3>
+          <div id="reviewbutton" onClick={this.openModal.bind(this)}>Leave a Review</div>
+        </div>
+        <Modal isOpen={this.state.showModal}
+          onRequestClose={this.closeModal.bind(this)}
+          style={authModalStyle}
+          contentLabel="Example Modal">
+          <ReviewFormContainer
+            closeModal={this.closeModal.bind(this)}
+          />
+        </Modal>
       </div>
     );
   }

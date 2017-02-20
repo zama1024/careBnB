@@ -16,7 +16,7 @@ export const fetchReviews = (listingId) => {
 export const updateReview = (data) => {
   return $.ajax({
     method: 'PATCH',
-    url: 'api/reviews',
+    url: `api/reviews/${data.id}`,
     data
   });
 };

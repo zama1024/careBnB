@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = Review.where(listing_id: params[:listingId])
+    @reviews = Review.includes(:author).where(listing_id: params[:listingId])
   end
 
   def create
@@ -16,9 +16,10 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    @review = Review.find(params[:id])
+    @review = Review.find_by(id: params[:review][:id])
     if @review.update(review_params)
-      render :show
+      @reviews = Review.where(listing_id: @review.listing_id)
+      render '/api/reviews/show'
     else
       render json: {base: ["Sorry something went wrong, please try again"]}
     end

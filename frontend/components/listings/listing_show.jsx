@@ -52,7 +52,7 @@ class ListingShow extends React.Component {
               <h2 id="listingtitle">{listing.title}</h2>
               <span id="city">{listing.city}, United States</span>
               <div className="rating">
-                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆ 155</span>
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆ {listing.reviews.length}</span>
               </div>
             </div>
             <div id="icons">

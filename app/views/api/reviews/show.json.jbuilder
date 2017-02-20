@@ -1,3 +1,2 @@
-json.partial! '/api/reviews/review', review: @review
+json.partial! 'review', review: @review
 json.author @review.author
-json.listing @review.listing
