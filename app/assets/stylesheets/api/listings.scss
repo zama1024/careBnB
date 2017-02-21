@@ -5,6 +5,15 @@
 
   width: 80%;
 }
+#pagelhs{
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+#wholepage{
+  display: flex;
+  margin-right: 10%;
+}
 
 #coverContainer{
   width: 100%;
@@ -20,13 +29,14 @@ body {
 }
 #showPageHeader {
   width: 60%;
-  height: 20%;
+  height: 5%;
 }
 #showPageHeader hr{
   margin-top: 3%;
 }
 #headerLinks{
-  padding-left: 23%;
+  padding-left: 60%;
+  width: 100%;
   padding-top: 2.5%;
   padding-bottom: 3%;
 }
@@ -37,10 +47,11 @@ body {
 #showPageSummary{
   display: flex;
   font-family: 'Noto Sans', sans-serif;
+  padding-left: 90%;
 }
 #listingdetails{
   width: 50%;
-  padding-left: 12%;
+  padding-left: 37%;
   padding-bottom: 3%;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
@@ -125,8 +136,23 @@ body {
   font-size: 13px;
 
 }
+#rhs{
+  position: relative;
+  width: 50%;
+}
+#bform{
+  width: 100%;
+  border-left: 1px solid #767676;
+  border-right: 1px solid #767676;
+  border-bottom: 1px solid #767676;
+    width: 50%;
+    z-index: 1001;
+    position: absolute;
+    top: 0px;
+    margin-top: -51px;
+}
 #bulpoints{
-  padding-left: 5%;
+  padding-left: 10%;
 }
 .iconsize{
   width: 20%;
@@ -161,6 +187,7 @@ body {
   margin-bottom: 10px;
 }
 #userphoto {
+  margin-left: 25%;
   width: 90px;
   height: 110px;
   text-align: center;

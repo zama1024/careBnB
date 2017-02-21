@@ -10,7 +10,7 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render :show
     else
-      render json: { base: ["Please fill out all the blank fields"] }, status: 422
+      render json: @booking.errors.full_messages, status: 422
     end
   end
 

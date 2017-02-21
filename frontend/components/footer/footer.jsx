@@ -8,7 +8,7 @@ class Footer extends React.Component {
         new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
       };
     return(
-      <div>
+      <div id = "footermargin">
         <hr></hr>
         <div className="footercontainer">
           <section className="FooterSec">

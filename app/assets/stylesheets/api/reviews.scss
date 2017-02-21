@@ -9,6 +9,9 @@
   width: 15px;
   height: 15px;
 }
+#pagelhs{
+  float: left;
+}
 #reviewimage {
   display: block;
   padding-right: 40px;
@@ -95,7 +98,7 @@ width: auto;
   width: 100%;
 }
 #helpfulness{
-  border: 1px solid #767676;;
+  border: 1px solid #767676;
   -webkit-font-smoothing: antialiased !important;
   color: #484848;
   width: 20%;

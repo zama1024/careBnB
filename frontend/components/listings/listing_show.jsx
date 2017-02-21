@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import ReviewShowContainer from '../reviews/review_show_container';
+import BookingFormContainer from '../bookings/booking_form_container';
 
 
 class ListingShow extends React.Component {
@@ -12,7 +13,6 @@ class ListingShow extends React.Component {
   }
 
   render() {
-
     const listing = this.props.listing;
     if (!listing) {
       return <div>Loading...</div>;
@@ -29,6 +29,8 @@ class ListingShow extends React.Component {
         <div id="coverContainer">
           <img className="coverPhoto" src={listing.listing_photo_url}></img>
         </div>
+        <div id="wholepage">
+        <div id="pagelhs">
         <div id="showPageHeader">
           <div id="headerLinks">
             <div id="hlcontainer">
@@ -75,7 +77,7 @@ class ListingShow extends React.Component {
             </div>
           </div>
         </div>
-        <hr></hr>
+        <hr id="abovelisting"></hr>
         <div id="listingdetails">
           <h4>About This Listing</h4>
           <hr></hr>
@@ -104,7 +106,7 @@ class ListingShow extends React.Component {
             <div className="boxitem middle">
               <span className="disblock amenity"><img className="amenitieslogo" src={window.kitchen} /><span className="val">  Kitchen </span> </span>
               <span className="disblock amenity"><img className="amenitieslogo" src={window.internet} /><span className="val">  Internet </span> </span>
-              <span className="disblock amenity"><img className="amenitieslogo" src={window.tv} /><span className="val">  Internet </span> </span>
+              <span className="disblock amenity"><img className="amenitieslogo" src={window.tv} /><span className="val">  TV </span> </span>
               <span className="disblock amenity"><img className="amenitieslogo" src={window.ac} /><span className="val">  Air Conditioner </span> </span>
             </div>
 
@@ -140,6 +142,14 @@ class ListingShow extends React.Component {
         </div>
         <hr></hr>
         <ReviewShowContainer listing={listing}/>
+        </div>
+        <div id="rhs">
+          <div id="bform">
+
+            <BookingFormContainer listingId={listing.id} clearBookingErrors={this.props.clearBookingErrors} createBooking={this.props.createBooking} daily_rate={listing.daily_rate} service_fee={listing.service_fee}/>
+          </div>
+        </div>
+        </div>
       </div>
   );
   }

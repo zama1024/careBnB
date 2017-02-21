@@ -9,7 +9,6 @@ const reviewReducer = (state = {}, action) => {
       newState.errors = [];
       return newState;
     case RECEIVE_REVIEW:
-    debugger
       return Object.assign({}, state, { [action.review.id]: action.review });
     case RECEIVE_REVIEW_ERRORS:
       newState.errors = action.errors;

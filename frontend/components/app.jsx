@@ -7,7 +7,7 @@ const App = ({ children }) => {
     <div>
       <NavBarContainer />
       { children }
-      <Footer />
+      <Footer className="footer"/>
     </div>
   );
 };

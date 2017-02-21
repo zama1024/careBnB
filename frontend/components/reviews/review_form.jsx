@@ -7,6 +7,7 @@ class ReviewForm extends React.Component {
     super(props);
     let user = this.props.user;
     let user_id = user? user.id : null;
+    debugger
     this.state = {
       accuracy_rating: 0,
       communication_rating: 0,
@@ -16,7 +17,8 @@ class ReviewForm extends React.Component {
       value_rating: 0,
       description: "",
       listing_id: this.props.listingId,
-      author_id: user_id
+      author_id: user_id,
+      error: []
     };
   }
 
@@ -27,12 +29,18 @@ class ReviewForm extends React.Component {
   updateDescription(e){
     this.setState({description: e.target.value});
   }
-
+  componentDidMount(){
+    debugger
+  }
   handleSubmit(e){
     e.preventDefault();
-    let review = this.state;
-    this.props.createReview({review});
-    this.props.closeModal();
+    let review = Object.assign({},this.state);
+    delete review.errors;
+    this.props.createReview({review}).fail( ({errors}) => {debugger;this.setState({ errors })});
+    if (this.state.error.length < 1){
+
+      this.props.closeModal();
+    }
   }
   render(){
     debugger
@@ -107,6 +115,7 @@ class ReviewForm extends React.Component {
 
           <input type="submit" value="Submit"
             id="lfb" className="button"/>
+          { this.state.error.length > 0 ? this.state.error[0] : null }
         </div>
       </form>
 

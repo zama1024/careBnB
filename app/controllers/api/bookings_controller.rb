@@ -5,13 +5,12 @@ class Api::BookingsController < ApplicationController
   end
 
   def create
-    booking = Booking.new(booking_params)
-    booking.user_id = current_user.id
-    if booking.save
-      @bookings = Booking.all
+    @booking = Booking.new(booking_params)
+    @booking.user_id = current_user.id
+    if @booking.save
       render :show
     else
-      render json: booking.errors.full_messages, status: 422
+      render json: @booking.errors.full_messages, status: 422
     end
   end
 

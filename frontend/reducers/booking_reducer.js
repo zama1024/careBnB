@@ -1,4 +1,4 @@
-import { RECEIVE_BOOKINGS, RECEIVE_BOOKING_ERRORS, CLEAR_BOOKING_ERRORS } from "../actions/bookings_actions";
+import { RECEIVE_BOOKINGS, RECEIVE_BOOKING_ERRORS, CLEAR_BOOKING_ERRORS } from "../actions/booking_actions";
 
 const _defaultState = { bookings: {}, errors: [] };
 
