@@ -9,7 +9,7 @@ class Api::BookingsController < ApplicationController
     booking.user_id = current_user.id
     if booking.save
       @bookings = Booking.all
-      render :index
+      render :show
     else
       render json: booking.errors.full_messages, status: 422
     end
@@ -24,7 +24,7 @@ class Api::BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :listing_id)
+    params.require(:booking).permit(:start_date, :end_date, :listing_id, :num_guests, :charity_org)
   end
 
 end

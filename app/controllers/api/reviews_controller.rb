@@ -8,8 +8,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.author_id = current_user.id
     if @review.save
-      @reviews = Review.where(listing_id: @review.listing_id)
-      render :index
+      render :show
     else
       render json: { base: ["Please fill out all the blank fields"] }, status: 422
     end

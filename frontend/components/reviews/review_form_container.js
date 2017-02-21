@@ -4,6 +4,7 @@ import ReviewForm from './review_form';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    currentUser: state.currentUser
   };
 };
 

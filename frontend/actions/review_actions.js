@@ -41,7 +41,7 @@ export function fetchReviews(listingId) {
 export function createReview(review) {
   return dispatch => {
     return APIUtil.createReview(review)
-      .then((reviews) => dispatch(receiveReviews(reviews)),
+      .then((review) => dispatch(receiveReview(review)),
       err => {
         return dispatch(receiveReviewErrors(err.responseJSON));
       });

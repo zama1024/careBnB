@@ -77,11 +77,12 @@ class ReviewShow extends React.Component{
               <span>{author.fname}</span>
 
             </div>
-            <div>
+            <div id="reviewcontainer">
               <span id="desc">{reviews[el].description}</span>
               <div id="helpline">
                 <span id="date">{(reviews[el].created_at).slice(0,10)}</span>
                 <div id="helpfulness" onClick={ this.incrementHelpfulness(reviews[el])}>
+                  <img src={window.like} />
                   <span>Helpful | {reviews[el].review_helpfulness}</span>
                 </div>
               </div>
@@ -137,7 +138,7 @@ class ReviewShow extends React.Component{
           onRequestClose={this.closeModal.bind(this)}
           style={authModalStyle}
           contentLabel="Example Modal">
-          <ReviewFormContainer
+          <ReviewFormContainer listingId={this.props.listing.id} user={this.props.currentUser}
             closeModal={this.closeModal.bind(this)}
           />
         </Modal>

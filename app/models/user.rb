@@ -16,6 +16,11 @@ class User < ActiveRecord::Base
   foreign_key: :author_id,
   primary_key: :id
 
+  has_many :bookings,
+  class_name: "Booking",
+  foreign_key: :user_id,
+  primary_key: :id
+
   def self.find_by_credentials(credentials)
     user = User.find_by(email: credentials[:email])
     user && user.is_password?(credentials[:password]) ? user : nil

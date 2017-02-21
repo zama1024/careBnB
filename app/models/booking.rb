@@ -1,5 +1,5 @@
 class Booking < ActiveRecord::Base
-  validates :user, :listing, :start_date, :end_date, presence: true
+  validates :user, :listing, :start_date, :end_date, :num_guests, :charity_org, presence: true
   validate :valid_dates, :availability
 
   belongs_to :user
