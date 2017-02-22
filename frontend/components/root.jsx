@@ -6,6 +6,7 @@ import ListingFormContainer from './listings/listing_form_container';
 import NavBarContainer from './navbar/navbar_container';
 import HomeContainer from './home/home_container';
 import ListingShowContainer from './listings/listing_show_container';
+import SearchContainer from './search/search_container';
 
 const _ensureLoggedIn = (store) => {
    const currentUser = store.getState().session.currentUser;
@@ -22,6 +23,7 @@ const Root = ({ store }) => (
         <IndexRoute component={HomeContainer} />
         <Route path="listings/new" component={ ListingFormContainer} />
         <Route path="listings/:listingId" component={ ListingShowContainer} />
+        <Route path="search/" component={ SearchContainer} />
       </Route>
     </Router>
   </Provider>

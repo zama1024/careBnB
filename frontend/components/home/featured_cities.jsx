@@ -3,21 +3,23 @@ import Slider from 'react-slick';
 class FeaturedCities extends React.Component {
   render(){
     var settings = {
-      dots: true,
+      dots: false,
       arrows: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 2,
+      slidesToShow: 6,
+      slidesToScroll: 1,
       adaptiveHeight: true,
-      nextArrow: <div>HI</div>
     };
     return (
       <div className='container'>
         <Slider classname="slider"{...settings}>
-          <div className="pic"><img src='https://lemonly.com/wp-content/uploads/2013/05/Paris.jpg' /></div>
-          <div className="pic"><img src='https://img.posterlounge.co.uk/images/wbig/poster-paris-cafe-24542.jpg' /></div>
-          <div className="pic"><img src='https://www.dropbox.com/home/projectphotos?preview=amsterdam.jpg' /></div>
+          <div className="pic"><img src={window.rome} /></div>
+          <div className="pic"><img src={window.paris} /></div>
+          <div className="pic"><img src={window.mumbai} /></div>
+          <div className="pic"><img src={window.london} /></div>
+          <div className="pic"><img src={window.amsterdam} /></div>
+          <div className="pic"><img src={window.barcelona} /></div>
         </Slider>
       </div>
     );
