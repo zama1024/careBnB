@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import { hashHistory } from 'react-router';
+import FeaturedCities from './featured_cities';
 
 class Home extends React.Component {
   componentDidMount(){
@@ -27,11 +28,11 @@ class Home extends React.Component {
 
           <span><span id="CareBnB">CareBnB </span>Book your home {fakefor} next vacation and be a part {fakeof} a greater cause.</span>
         </div>
-      <div>
-
+        <div>
           <h1>Listings: </h1>
-          {photos}
+            {photos}
         </div>
+        <FeaturedCities />
       </div>
     );
   }

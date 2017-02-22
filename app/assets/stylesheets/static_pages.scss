@@ -6,6 +6,34 @@
   width:  100%;
   white-space: nowrap;
 }
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: black;
+  background: black;
+}
+.pic{
+  padding-left: 20px;
+  width: 10px;
+}
+.pic img{
+  width: 100px;
+  height: 20px;
+}
+
+
+.slick-prev:after {
+content: ">";
+color: red;
+font-size: 30px;
+}
+
+.slick-next:before {
+content: "<";
+color: red;
+font-size: 30px;
+}
 #navimg{
 width: 25px;
 height: 25px;
