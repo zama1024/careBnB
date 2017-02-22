@@ -1,12 +1,7 @@
 class Api::ListingsController < ApplicationController
   def index
-    @listings = Listing.find_by_filters(
-       params[:filters][:bounds],
-       params[:filters][:max_price],
-       params[:filters][:min_price],
-       params[:filters][:start_date],
-       params[:filters][:end_date]
-       )
+    @listings = Listing.all
+    render :index
   end
 
   def show
@@ -35,9 +30,5 @@ class Api::ListingsController < ApplicationController
       :city,
       :donation_percentage
     )
-  end
-
-  def bounds
-    params[:bounds]
   end
 end
