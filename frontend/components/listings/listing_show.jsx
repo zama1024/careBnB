@@ -36,7 +36,7 @@ class ListingShow extends React.Component {
             <div id="hlcontainer">
 
               <span className="headerLink" id="overview">Overiew</span>
-              <span className="headerLink">Reviews</span>
+              <span className="headerLink"><a href="#reviews">Reviews</a></span>
               <span className="headerLink">The Host</span>
               <span className="headerLink">Location</span>
             </div>
@@ -141,7 +141,7 @@ class ListingShow extends React.Component {
           </div>
         </div>
         <hr></hr>
-        <ReviewShowContainer listing={listing}/>
+        <a id="reviews"><ReviewShowContainer listing={listing}/></a>
         </div>
         <div id="rhs">
           <div id="bform">

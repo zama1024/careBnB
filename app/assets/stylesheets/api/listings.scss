@@ -40,6 +40,7 @@ body {
   padding-top: 2.5%;
   padding-bottom: 3%;
 }
+
 #headerLinks hr {
   margin: 0px;
   padding: 0px;
@@ -216,6 +217,10 @@ body {
   font-weight: 400;
   font-size: 19px;
   color: #484848;
+}
+.headerLink a{
+  text-decoration: none;
+  color: inherit;
 }
 #greenhr{
   background: #007090;
