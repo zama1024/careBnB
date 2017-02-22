@@ -1,6 +1,6 @@
 class Review < ActiveRecord::Base
   validates :accuracy_rating, :communication_rating, :cleanliness_rating, :location_rating, :checkin_rating, :value_rating, :author_id, :listing_id, presence: true, :numericality => { :greater_than => 0 }
-  validates :description, presence: true, length: { minimum: 1 }
+  validates :description, presence: true
   validates :review_helpfulness, presence: true
 
   belongs_to :listing,

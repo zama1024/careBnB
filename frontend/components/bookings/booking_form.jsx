@@ -29,7 +29,7 @@ class BookingForm extends React.Component {
     let booking = this.state;
     delete booking.error;
     this.props.createBooking(booking)
-      .fail( ({errors}) => this.setState({ errors }));
+      .fail( ({errors}) => {this.setState({ errors })});
   }
 
   calculateDays() {

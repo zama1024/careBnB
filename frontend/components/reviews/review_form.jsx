@@ -18,7 +18,7 @@ class ReviewForm extends React.Component {
       description: "",
       listing_id: this.props.listingId,
       author_id: user_id,
-      error: []
+      errors: []
     };
   }
 
@@ -30,20 +30,22 @@ class ReviewForm extends React.Component {
     this.setState({description: e.target.value});
   }
   componentDidMount(){
-    debugger
   }
   handleSubmit(e){
     e.preventDefault();
     let review = Object.assign({},this.state);
-    delete review.errors;
-    this.props.createReview({review}).fail( ({errors}) => {debugger;this.setState({ errors })});
+    delete review.error;
+    this.props.createReview({review}).fail( ({errors}) => this.setState({errors}));
     if (this.state.error.length < 1){
 
       this.props.closeModal();
     }
   }
   render(){
-    debugger
+    let errors = this.state.errors;
+    if(this.state.errors.length > 0){
+      errors = this.state.errors.map(error => <li className="error">{error}</li> )
+    }
     if (!this.props.user){
       return <span id="greeting">Please login to leave a review :)</span>;
     }
@@ -115,7 +117,9 @@ class ReviewForm extends React.Component {
 
           <input type="submit" value="Submit"
             id="lfb" className="button"/>
-          { this.state.error.length > 0 ? this.state.error[0] : null }
+          <ul>
+            {errors}
+          </ul>
         </div>
       </form>
 
