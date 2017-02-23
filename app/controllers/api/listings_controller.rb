@@ -1,6 +1,11 @@
 class Api::ListingsController < ApplicationController
   def index
-    @listings = Listing.all
+    if params[:searchParams]
+      @listings = Listing.find_by_params(params[:searchParams])
+      @map_center = Geocoder.coordinates(params[:searchParams][:address]) if params[:searchParams][:address] != ""
+    else
+      @listings = Listing.all
+    end
     render :index
   end
 

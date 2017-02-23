@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.1'
 gem "paperclip", "~> 5.0.0"
 gem 'figaro'
+gem 'geocoder'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

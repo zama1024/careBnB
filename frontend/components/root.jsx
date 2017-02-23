@@ -24,6 +24,23 @@ const Root = ({ store }) => (
         <Route path="listings/new" component={ ListingFormContainer} />
         <Route path="listings/:listingId" component={ ListingShowContainer} />
         <Route path="search/" component={ SearchContainer} />
+        <Route path="search/:address/:checkIn/:checkOut/:guests" component={ SearchContainer} />
+        <Route path="search/:address//:checkOut/:guests" component={ SearchContainer} />
+        <Route path="search/:address///:guests" component={ SearchContainer} />
+        <Route path="search/////" component={ SearchContainer} />
+        <Route path="search/:address////" component={ SearchContainer} />
+        <Route path="search/:address/:checkIn///" component={ SearchContainer} />
+        <Route path="search/:address/:checkIn/:checkOut//" component={ SearchContainer} />
+        <Route path="search//:checkIn/:checkOut//" component={ SearchContainer} />
+        <Route path="search//:checkIn/:checkOut/:guests/" component={ SearchContainer} />
+        <Route path="search//:checkIn///" component={ SearchContainer} />
+        <Route path="search//:checkIn//:guests/" component={ SearchContainer} />
+        <Route path="search///:checkOut/:guests/" component={ SearchContainer} />
+        <Route path="search///:checkOut//" component={ SearchContainer} />
+        <Route path="search////:guests/" component={ SearchContainer} />
+
+
+
       </Route>
     </Router>
   </Provider>

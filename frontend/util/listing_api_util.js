@@ -7,10 +7,11 @@ export const createListing = (listing) => {
 };
 
 
-export const fetchListings = () => {
+export const fetchListings = (listings) => {
   return $.ajax({
     method: 'GET',
-    url: 'api/listings'
+    url: 'api/listings',
+    data: listings
   });
 };
 

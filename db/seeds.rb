@@ -46,7 +46,7 @@ Rorenet cocac idosieren rumom etorop ine sukihes reso! Sere po pimesieh gac bun?
 Te cadie dur wuruve ibe ebotet nele eve. Elu nigedew til ceco la nuni, eri yo te tiexan panoras docic utietotec erode. Tor ihopifip sawamie pef pa yilita yin kitaboh; ne emirehu hutog! Rane pocon semiya tone ole, pesa gel wot no cetibo posarev tonoy pu totes, aliteluc simapa gemiete semupor manew nise litonie? Erenid moseren nel lesetat dac nohal cieset ele.",
   host_id: u1.id,
   lat: 40.730610,
-  lng: -73.935242,
+  lng: 73.935242,
   daily_rate: 20,
   donation_percentage: 20,
   address: "Flushing",

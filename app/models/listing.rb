@@ -19,6 +19,35 @@ class Listing < ActiveRecord::Base
   foreign_key: :listing_id,
   primary_key: :id
 
+  def self.find_by_params(searchParams)
+    return Listing.all if searchParams[:address] == "" && searchParams[:checkIn] == "" && searchParams[:checkOut] == "" && searchParams[:guests] == "";
+    if searchParams[:address] != ""
+      @listings = Listing.where("LOWER(city)  LIKE ?", "%#{searchParams[:address].downcase}%")
+      if @listings = []
+        @listings = Listing.where("LOWER(address) LIKE ?", "%#{searchParams[:address].downcase}%")
+      end
+    end
+
+    if searchParams[:guests] != ""
+      if @listings
+        @listings = @listings.where("max_guests >= ?", searchParams[:guests])
+      else
+        @listings = Listing.where("max_guests >= ?", searchParams[:guests])
+      end
+    end
+
+    if searchParams[:checkIn] != "" && searchParams[:checkOut] != ""
+      if @listings
+        @listings = @listings.select do |listing|
+          listing.is_available?(Date.parse(searchParams[:checkIn]), Date.parse(searchParams[:checkOut]))
+        end
+      else
+        @listings = Listing.all
+      end
+    end
+    return @listings
+  end
+
   def is_available?(start_date, end_date)
     self.bookings.each do |booking|
       if booking.start_date <= end_date && start_date <= booking.end_date

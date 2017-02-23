@@ -7,7 +7,6 @@ class ReviewForm extends React.Component {
     super(props);
     let user = this.props.user;
     let user_id = user? user.id : null;
-    debugger
     this.state = {
       accuracy_rating: 0,
       communication_rating: 0,

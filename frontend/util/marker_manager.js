@@ -22,6 +22,5 @@ export default class MarkerManager {
    });
    marker.addListener('click', () => this.handleClick(listing));
    this.markers.push(marker);
-   debugger
  }
 }

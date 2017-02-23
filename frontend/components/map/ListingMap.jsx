@@ -5,17 +5,24 @@ import MarkerManager from '../../util/marker_manager';
 class ListingMap extends React.Component {
 
   componentDidMount() {
+    let lat;
+    let lng;
+    if (this.props.listings.map_center){
+      lat = this.props.listings.map_center[0];
+      lng = this.props.listings.map_center[1];
+    }else{
+      lat = 37.0902;
+      lng = 95.7129;
+    }
     const mapOptions = {
-     center: { lat: 37.7758, lng: -122.435 }, // this is SF
+     center: { lat: lat, lng: lng }, // this is SF
      zoom: 13
    };
    this.map = new google.maps.Map(this.mapNode, mapOptions);
-   debugger
    this.MarkerManager = new MarkerManager(this.map);
    this.MarkerManager.updateMarkers(this.props.listings);
   }
   render(){
-    debugger
     if (this.MarkerManager && this.props.listing){
       this.MarkerManager.updateMarkers(this.props.listings);
     }

@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import Search from './search';
+import HomeSearch from './home_search';
+import {fetchListings} from '../../actions/listing_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -15,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Search);
+)(HomeSearch);
