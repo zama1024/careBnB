@@ -6,7 +6,6 @@ export const createListing = (listing) => {
   });
 };
 
-
 export const fetchListings = (listings) => {
   return $.ajax({
     method: 'GET',

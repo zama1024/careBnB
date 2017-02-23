@@ -6,6 +6,8 @@ import HomeSearchContainer from '../search/home_search_container';
 
 class Home extends React.Component {
   componentDidMount(){
+    $("input.searchShow" ).toggleClass( "searchHidden", true);
+    $("div.nav-container-border" ).toggleClass( "nav-container", true);
     this.props.fetchListings();
   }
 

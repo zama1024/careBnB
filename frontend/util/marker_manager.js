@@ -5,11 +5,14 @@ export default class MarkerManager {
   }
 
   updateMarkers(listings) {
-    this.listings = Object.keys(listings).map(id => listings[id]);
+    let myListings = Object.keys(listings)
+    myListings.pop();
+    this.listings = myListings.map(id => listings[id]);
     this._listingsToAdd().forEach(this._createMarkerFromListing.bind(this));
     console.log('time to update');
   }
   _listingsToAdd() {
+    debugger
     const currentListings = this.markers.map( marker => marker.listingId );
     return this.listings.filter( listing => !currentListings.includes(listing.id) );
   }

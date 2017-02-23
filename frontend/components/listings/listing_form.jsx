@@ -14,7 +14,17 @@ class ListingForm extends React.Component{
       donation_percentage: 0,
       address: "",
       city: "",
-      listing_photo_url: "https://cdn.wallpapersbuzz.com/image/4650/b_nice-house.jpg"
+      listing_photo_url: "https://cdn.wallpapersbuzz.com/image/4650/b_nice-house.jpg",
+      max_guests: 1,
+      num_bedroom: 1,
+      listing_type: "",
+      num_bathroom: 1,
+      check_in: "2PM",
+      check_out: "12pm",
+      property_type: "house",
+      service_fee: 0,
+      weekly_discount: 0,
+      monthly_discount: 0
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     // this.navigateToSearch = this.navigateToSearch.bind(this);
@@ -98,6 +108,7 @@ class ListingForm extends React.Component{
                 value={this.state.city}
                 onChange={this.update("city")}/>
 
+          
               <input type="submit" value="Create Listing"
                 id="lfb" className="button"/>
             </div>

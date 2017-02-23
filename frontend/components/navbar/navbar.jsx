@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
+import { hashHistory, replace } from 'react-router';
 
 import Modal from 'react-modal';
 import { authModalStyle } from '../../util/modal_styles';
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showModal: false, formType: '' };
+    this.state = { address: "", showModal: false, formType: '' };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -71,7 +71,7 @@ class Nav extends React.Component {
           </img>
         </div>
         <div id="search">
-          <input type="text" />
+          <input className="searchHidden" type="text" onChange={ this.search.bind(this) }/>
         </div>
         <div className="leftContainer">
           <a className="link" onClick={this.openModal.bind(this, 'signup', false)}>Become a Host</a>
@@ -92,6 +92,13 @@ class Nav extends React.Component {
     );
   }
 
+  search(e) {
+    e.preventDefault();
+    this.setState({address: e.target.value});
+    let searchCity = this.state.address;
+    this.props.updateSearchParams({address: e.target.value});
+  }
+
   greeting() {
     return (
       <div className="nav-container">
@@ -100,7 +107,7 @@ class Nav extends React.Component {
           </img>
         </div>
         <div id="search">
-          <input type="text" />
+          <input className="searchHidden" type="text" onChange={ this.search.bind(this) }/>
         </div>
         <div className="leftContainer">
 

@@ -14,6 +14,9 @@ export const fetchListings = listings => dispatch => (
     .then(listings => dispatch(receiveListings(listings)))
 );
 
+
+
+
 export const fetchListing = id => dispatch => (
   APIUtil.fetchListing(id)
     .then(listing => dispatch(receiveListing(listing)))
