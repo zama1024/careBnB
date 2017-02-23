@@ -47,7 +47,7 @@ class Search extends React.Component {
     if(this.state.fetching){
       return null;
     }
-    debugger
+
     let listings = Object.keys(this.props.listings);
     let photos = listings.slice(0,listings.length - 1).map(id => <img src={this.props.listings[id].listing_photo_url} />);
     return(

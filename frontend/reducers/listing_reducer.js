@@ -7,7 +7,6 @@ const ListingsReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_LISTINGS:
-    debugger
       return action.listings;
     case RECEIVE_LISTING:
       const newListing = {[action.listing.id]: action.listing};

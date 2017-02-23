@@ -8,11 +8,11 @@ class ListingMap extends React.Component {
     let lat;
     let lng;
     if (this.props.listings.map_center){
-      debugger
+
       lat = this.props.listings.map_center[0];
       lng = this.props.listings.map_center[1];
     }else{
-      debugger
+
       lat = 42.877742;
       lng = -97.380979;
     }
@@ -32,7 +32,6 @@ class ListingMap extends React.Component {
     // if(map_center == null){
     //   map_center = [-180,180];
     // }
-    debugger
     if (map_center == null && this.props.listings.map_center != null ||
         map_center != null && this.props.listings.map_center == null) {
       return false;
@@ -49,7 +48,7 @@ class ListingMap extends React.Component {
   componentWillReceiveProps(nextProps){
     let lat;
     let lng;
-    debugger
+
     if(this.sameMapValue(nextProps.listings.map_center)){
       if (this.props.listings.map_center){
         lat = this.props.listings.map_center[0];
@@ -63,13 +62,13 @@ class ListingMap extends React.Component {
         zoom: 2
       };
       this.map.setOptions(mapOptions);
-      debugger
-      this.MarkerManager.updateMarkers(this.props.listings);
+
+
+      this.MarkerManager.updateMarkers(nextProps.listings);
     }
   }
   render(){
     if (this.MarkerManager && this.props.listings){
-      this.MarkerManager.updateMarkers(this.props.listings);
     }
     return(
       <div id='map-container' ref ={ map => this.mapNode = map }></div>
