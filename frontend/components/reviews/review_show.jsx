@@ -51,7 +51,24 @@ class ReviewShow extends React.Component{
     let keys = Object.keys(reviews)
     keys = keys.slice(0,keys.length - 1);
 
-    if (!keys.length) return null;
+    if (!keys.length) {
+      return (
+      <div>
+      <div id= "buttonholder">
+        <h3>Want to leave a Review?</h3>
+        <div id="reviewbutton" onClick={this.openModal.bind(this)}>Leave a Review</div>
+      </div>
+      <Modal isOpen={this.state.showModal}
+        onRequestClose={this.closeModal.bind(this)}
+        style={authModalStyle}
+        contentLabel="Example Modal">
+        <ReviewFormContainer listingId={this.props.listing.id} user={this.props.currentUser}
+          closeModal={this.closeModal.bind(this)}
+        />
+      </Modal>
+    </div>
+    );
+  }
 
     let accuracyRating = 0;
     let communicationRating = 0;
@@ -60,7 +77,7 @@ class ReviewShow extends React.Component{
     let checkinRating = 0;
     let valueRating = 0;
     let reviewsDesc = [];
-    for (var i = 0; i < keys.length; i++) {
+    for (var i = 0; i < keys.length ; i++) {
       let el = keys[i];
       accuracyRating += reviews[el].accuracy_rating;
       communicationRating += reviews[el].communication_rating;

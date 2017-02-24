@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router';
 import { hashHistory } from 'react-router';
 import FeaturedCities from './featured_cities';
 import HomeSearchContainer from '../search/home_search_container';
+import Slider from 'react-slick';
 
 class Home extends React.Component {
   componentDidMount(){
@@ -22,10 +23,41 @@ class Home extends React.Component {
   }
 
   render() {
+    if(this.props.listings.length == 0){
+      return <div>loading</div>;
+    }
+    var settings = { dots: false, arrows: true, infinite: true, speed: 500, slidesToShow: 3, slidesToScroll: 1, adaptiveHeight: false};
     let fakeof = "of";
     let fakefor = "for";
     let listings = this.props.listings.slice(0, this.props.listings.length -1);
-    let photos = listings.map(listing => (<img onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>));
+
+    let photos = listings.map(listing => (
+      <div className="homebox">
+        <img key={listing.id} onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>
+        <div id="info">
+          <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
+          <span id="infotitle">{listing.title}</span>
+          <div className="starcontainer">
+            <img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} />
+            <span>{listing.reviews.length} Reviews</span>
+          </div>
+        </div>
+      </div>
+    ));
+    let sorted = listings.slice().sort((a,b) => {return a.reviews.length > b.reviews.length;});
+    let reviewSorted = sorted.map(listing => (
+      <div className="homebox">
+        <img key={listing.id} onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>
+        <div id="info">
+          <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
+          <span id="infotitle">{listing.title}</span>
+          <div className="starcontainer">
+            <img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} />
+            <span>{listing.reviews.length} Reviews</span>
+          </div>
+        </div>
+      </div>
+    ));
     return(
       <div>
         <div className="vidcontainer">
@@ -37,12 +69,22 @@ class Home extends React.Component {
           <span><span id="CareBnB">CareBnB </span>Book your home {fakefor} next vacation and be a part {fakeof} a greater cause.</span>
         </div>
         <HomeSearchContainer />
-        <div>
-          <h1>Listings: </h1>
-          {photos}
+        <div className='homeinfocontainer'>
+          <h3>Homes</h3>
+          <Slider  {...settings}>
+            {photos}
+          </Slider>
         </div>
-        <h3>FeaturedCities</h3>
-        <FeaturedCities />
+        <div>
+
+          <FeaturedCities />
+        </div>
+        <div className='homeinfocontainer'>
+          <h3>Browse by review</h3>
+          <Slider  {...settings}>
+            {reviewSorted}
+          </Slider>
+        </div>
 
       </div>
     );

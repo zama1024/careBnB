@@ -4,6 +4,4 @@ json.extract! listing, :id, :host_id, :title, :description, :daily_rate,
  :check_out,:property_type, :service_fee, :monthly_discount, :weekly_discount, :lat, :lng
  json.image_url asset_path(listing.image.url)
 
-# json.reviews do
-#   json.partial! 'api/reviews/review', collection: bench.reviews, as: :review
-# end
+json.reviews listing.reviews

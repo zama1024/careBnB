@@ -26,12 +26,7 @@ class ListingMap extends React.Component {
   }
 
   sameMapValue(map_center){
-    // if(map_center == null && this.props.listings.map_center == null){
-    //   return true;
-    // }
-    // if(map_center == null){
-    //   map_center = [-180,180];
-    // }
+
     if (map_center == null && this.props.listings.map_center != null ||
         map_center != null && this.props.listings.map_center == null) {
       return false;
@@ -54,17 +49,17 @@ class ListingMap extends React.Component {
         lat = this.props.listings.map_center[0];
         lng = this.props.listings.map_center[1];
       }else{
-        lat = 42.877742;;
+        lat = 42.877742;
         lng = -97.380979;
       }
       const mapOptions = {
         center: { lat: lat, lng: lng }, // this is SF
-        zoom: 2
+        zoom: 13
       };
       this.map.setOptions(mapOptions);
 
 
-      this.MarkerManager.updateMarkers(nextProps.listings);
+      this.MarkerManager.updateMarkers(this.props.listings);
     }
   }
   render(){

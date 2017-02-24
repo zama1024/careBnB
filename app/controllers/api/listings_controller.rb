@@ -15,10 +15,12 @@ class Api::ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
+    @listing.lat, @listing.lng =  Geocoder.coordinates(listing_params[:city])
+    debugger
     if @listing.save
       render :show
     else
-      render json: { base: ["Invalid entry, please try again"] }, status: 422
+      render json: @listing.errors.full_messages, status: 422
     end
   end
 
@@ -26,8 +28,6 @@ class Api::ListingsController < ApplicationController
     params.require(:listing).permit(
       :host_id,
       :title,
-      :lat,
-      :lng,
       :description,
       :daily_rate,
       :listing_photo_url,

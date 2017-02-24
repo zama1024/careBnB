@@ -28,7 +28,7 @@ class HomeSearch extends React.Component {
 
   render(){
     return(
-    <div id="searchContainer">
+    <div id="searchContainer" className="shadow">
       <div id="where">
         <label>Where</label>
         <input onChange={this.update("address").bind(this)} type="text" placeholder="Destination, city" />
@@ -42,12 +42,12 @@ class HomeSearch extends React.Component {
 
       </div>
       <div id="guests">
-        <div>
+        <div id="guestsrhs">
 
           <label>Guests</label>
-          <input type="number" onChange={this.update("guests").bind(this)} placeholder="1 guests"/>
+          <input type="number" onChange={this.update("guests").bind(this)} placeholder="1 guests" />
         </div>
-        <div onClick={this.toSearchPage.bind(this)} id="searchicon"><img src="http://www.endlessicons.com/wp-content/uploads/2015/08/search-icon-2.png" /></div>
+        <div onClick={this.toSearchPage.bind(this)} id="searchicon"><span>Search</span></div>
       </div>
     </div>
   );

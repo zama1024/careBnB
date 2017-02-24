@@ -1,6 +1,7 @@
 import React from 'react';
 import ListingMap from '../map/ListingMap';
 import Rheostat from 'rheostat';
+import {hashHistory} from 'react-router';
 
 class Search extends React.Component {
   constructor(props){
@@ -43,35 +44,68 @@ class Search extends React.Component {
       this.props.updateSearchParams(formparams);
     });
   }
+  toShowPage(id){
+    debugger
+    return (e) => {
+      e.preventDefault();
+      hashHistory.push(`/listings/${id}`);
+    };
+  }
+
   render(){
     if(this.state.fetching){
       return null;
     }
-
+    debugger
+    // let listings = Object.keys(this.props.listings);
+    // let photos = listings.slice(0,listings.length - 1).map(id =>
+    //   <img src={this.props.listings[id].listing_photo_url} />);
     let listings = Object.keys(this.props.listings);
-    let photos = listings.slice(0,listings.length - 1).map(id => <img src={this.props.listings[id].listing_photo_url} />);
+    listings = listings.slice(0,listings.length - 1).map(id =>
+      this.props.listings[id]);
+      let photos = listings.map(listing => (
+        <div className="searchpagedivbox">
+          <img key={listing.id} onClick={this.toShowPage(listing.id).bind(this)} className = "listphoto" src={listing.listing_photo_url}/>
+          <div id="searchdivinfo">
+            <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
+            <span id="searchinfotitle">{listing.title}</span>
+            <div className="starcontainer">
+              <img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} />
+              <span>{listing.reviews.length} Reviews</span>
+            </div>
+          </div>
+        </div>
+      ));
+
     return(
       <div id="searchpage">
         <div id="searchform">
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <input type="date" onChange={this.update("checkIn").bind(this)} placeholder="Check In" />
-            <input type="date"  onChange={this.update("checkOut").bind(this)}placeholder="Check Out" />
-              <input type="number" onChange={this.update("guests").bind(this)} placeholder="1 guest" />
+            <input className="date" type="date" onChange={this.update("checkIn").bind(this)} placeholder="Check In" />
+            <input className="date" type="date"  onChange={this.update("checkOut").bind(this)}placeholder="Check Out" />
+              <input type="number" onChange={this.update("guests").bind(this)} placeholder="Guests" />
               <input type="text"  onChange={this.update("roomType").bind(this)}placeholder="Room type" />
-              <input type="number"  onChange={this.update("price").bind(this)}placeholder="Price range" />
               <div className="rheostat-container">
+                <span>Min Price: ${this.state.priceRange[0]}</span>
                 <Rheostat min={1} max={1000} values={[1, 1000]}  onValuesUpdated={this.updateValue.bind(this)}/>
+                  <span>Max Price: ${this.state.priceRange[1]}</span>
+
               </div>
-              <input type="submit" value="Search"/>
+              <input id="searchsubmit" type="submit" value="Search"/>
           </form>
         </div>
-        <div>
+        <div id="mappage">
+
           <div id="searchlhs">
             {photos}
           </div>
-          <ListingMap id="map" listings={this.props.listings}/>
+          <div id="maprhs">
+
+            <ListingMap id="map" listings={this.props.listings}/>
+          </div>
 
         </div>
+
       </div>
     );
   }

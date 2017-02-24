@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import {hashHistory} from 'react-router';
 
 class ListingForm extends React.Component{
   constructor(props) {
@@ -8,8 +9,6 @@ class ListingForm extends React.Component{
       title: "",
       description: "",
       host_id: this.props.currentUser.id,
-      lat: -180,
-      lng: 180,
       daily_rate: 0,
       donation_percentage: 0,
       address: "",
@@ -31,9 +30,7 @@ class ListingForm extends React.Component{
     // this.handleCloudinary = this.handleCloudinary.bind(this);
   }
 
-  navigateToSearch() {
-    this.props.router.push("/");
-  }
+
 
   update(property) {
     return e => this.setState({
@@ -41,20 +38,11 @@ class ListingForm extends React.Component{
     });
   }
 
-  // handleCloudinary(e) {
-  //   e.preventDefault();
-  //   cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
-  //     if(error)
-  //       console.log(error);
-  //     else
-  //       this.setState({ picture_url: results[0].secure_url });
-  //   });
-  // }
 
   handleSubmit(e) {
     e.preventDefault();
     const listing = Object.assign({}, this.state);
-    this.props.createListing(listing);
+    this.props.createListing(listing).then(listing => hashHistory.push(`/listings/${listing.id}`));
     this.navigateToSearch();
   }
 
@@ -108,7 +96,7 @@ class ListingForm extends React.Component{
                 value={this.state.city}
                 onChange={this.update("city")}/>
 
-          
+
               <input type="submit" value="Create Listing"
                 id="lfb" className="button"/>
             </div>

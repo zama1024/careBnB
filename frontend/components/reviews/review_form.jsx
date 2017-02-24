@@ -22,7 +22,7 @@ class ReviewForm extends React.Component {
   }
 
   onStarClick(nextValue, prevValue, name) {
-    this.setState({name: nextValue});
+    this.setState({[name]: nextValue});
    }
 
   updateDescription(e){

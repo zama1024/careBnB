@@ -6,17 +6,19 @@
   width: 80%;
 }
 #pagelhs{
-  width: 100%;
-  display: inline-block;
-  position: relative;
+  width: 60%;
 }
 #wholepage{
   display: flex;
   margin-right: 10%;
 }
+.coverPhoto{
+  margin-top: 1px;
+}
 
 #coverContainer{
   width: 100%;
+  margin-top: 1px;
 }
 body {
   padding: 0;
@@ -26,6 +28,7 @@ body {
   position: relative;
   width: 100%;
   height: auto;
+  margin-top: -1.5%;
 }
 #showPageHeader {
   width: 60%;
@@ -137,19 +140,18 @@ body {
   font-size: 13px;
 
 }
-#rhs{
+#showrhs{
+  width: 40%;
   position: relative;
-  width: 50%;
+  top: 0px;
+  right: 0px;
 }
 #bform{
   border-left: 1px solid #767676;
   border-right: 1px solid #767676;
   border-bottom: 1px solid #767676;
-  width: 63%;
-  z-index: 1001;
+  width: 80%;
   position: absolute;
-  top: 0px;
-  margin-top: -51px;
 }
 #bulpoints{
   padding-left: 10%;
@@ -243,9 +245,7 @@ body {
   visibility: visible;
 }
 
-#rhs{
-  width: 50%;
-}
+
 .price{
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
@@ -325,13 +325,10 @@ body {
   display: block;
 }
 div#background {
-  background: url("https://static1.squarespace.com/static/55c1d8bce4b081fdca9dc5fd/t/573c76938259b5b384b45f7e/1463580310514/Individuals.jpg?format=1500w");
-  background-size: cover;
-  height: 50%;
+  height: 0%;
   width: 100%;
   text-align: center;
   align-items: center;
-  line-height:  150px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -342,7 +339,7 @@ html{
   padding: 0;
 }
 #holder{
-  margin-bottom: 30%;
+  margin-bottom: 10%;
 }
 
 #pagediv{

@@ -143,11 +143,13 @@ class ListingShow extends React.Component {
         <hr></hr>
         <a id="reviews"><ReviewShowContainer listing={listing}/></a>
         </div>
-        <div id="rhs">
+        <div id="showrhs">
+
           <div id="bform">
 
             <BookingFormContainer listingId={listing.id} clearBookingErrors={this.props.clearBookingErrors} createBooking={this.props.createBooking} daily_rate={listing.daily_rate} service_fee={listing.service_fee}/>
           </div>
+          <div></div>
         </div>
         </div>
       </div>
