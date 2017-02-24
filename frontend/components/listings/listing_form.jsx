@@ -13,7 +13,7 @@ class ListingForm extends React.Component{
       donation_percentage: 0,
       address: "",
       city: "",
-      listing_photo_url: "https://cdn.wallpapersbuzz.com/image/4650/b_nice-house.jpg",
+      listing_photo_url: "http://www.mrwallpaper.com/wallpapers/Luxury-Resort-Evening-851x315.jpg",
       max_guests: 1,
       num_bedroom: 1,
       listing_type: "",
