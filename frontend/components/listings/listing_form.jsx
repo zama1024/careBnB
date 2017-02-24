@@ -42,8 +42,7 @@ class ListingForm extends React.Component{
   handleSubmit(e) {
     e.preventDefault();
     const listing = Object.assign({}, this.state);
-    this.props.createListing(listing).then(listing => hashHistory.push(`/listings/${listing.id}`));
-    this.navigateToSearch();
+    this.props.createListing(listing).then(({listing}) => hashHistory.push(`/listings/${listing.id}`));
   }
 
   render() {

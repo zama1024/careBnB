@@ -5,7 +5,6 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    debugger
     @review = Review.new(review_params)
     @review.author_id = current_user.id
     if @review.save

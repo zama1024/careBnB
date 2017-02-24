@@ -52,11 +52,11 @@ class Nav extends React.Component {
 
 
   toMyListings() {
-    hashHistory.push('/myListing');
+    hashHistory.push('/myListings');
   }
 
   toMyBookings() {
-    hashHistory.push('/myBooking');
+    hashHistory.push('/myBookings');
   }
 
   toHome() {

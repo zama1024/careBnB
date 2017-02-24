@@ -1,6 +1,8 @@
 class Api::ListingsController < ApplicationController
   def index
-    if params[:searchParams]
+    if params[:currentUser]
+      @listings = current_user.listings
+    elsif params[:searchParams]
       @listings = Listing.find_by_params(params[:searchParams])
       @map_center = Geocoder.coordinates(params[:searchParams][:address]) if params[:searchParams][:address] != ""
     else
@@ -16,7 +18,6 @@ class Api::ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.lat, @listing.lng =  Geocoder.coordinates(listing_params[:city])
-    debugger
     if @listing.save
       render :show
     else
