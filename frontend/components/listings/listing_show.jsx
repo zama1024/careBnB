@@ -149,7 +149,6 @@ class ListingShow extends React.Component {
 
             <BookingFormContainer listingId={listing.id} clearBookingErrors={this.props.clearBookingErrors} createBooking={this.props.createBooking} daily_rate={listing.daily_rate} service_fee={listing.service_fee}/>
           </div>
-          <div></div>
         </div>
         </div>
       </div>

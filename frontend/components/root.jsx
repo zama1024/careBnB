@@ -8,6 +8,7 @@ import HomeContainer from './home/home_container';
 import ListingShowContainer from './listings/listing_show_container';
 import SearchContainer from './search/search_container';
 import MyListingsContainer from './listings/myListings_container';
+import MyBookingsContainer from './bookings/myBookings_container';
 
 const _ensureLoggedIn = (store) => {
    const currentUser = store.getState().session.currentUser;
@@ -23,6 +24,7 @@ const Root = ({ store }) => (
       <Route path="/" component={ App }>
         <IndexRoute component={HomeContainer} />
         <Route path="/myListings" component={ MyListingsContainer} />
+        <Route path="/myBookings" component={ MyBookingsContainer} />
         <Route path="listings/new" component={ ListingFormContainer} />
         <Route path="listings/:listingId" component={ ListingShowContainer} />
         <Route path="search/" component={ SearchContainer} />

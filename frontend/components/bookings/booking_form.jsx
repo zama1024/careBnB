@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, hashHistory } from 'react-router';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -28,8 +28,8 @@ class BookingForm extends React.Component {
     }
     let booking = this.state;
     delete booking.error;
-    this.props.createBooking(booking)
-      .fail( ({errors}) => {this.setState({ errors })});
+    this.props.createBooking(booking).fail( ({errors}) => {this.setState({ errors })}).then(() => {return hashHistory.push("/myBookings")});
+
   }
 
   calculateDays() {

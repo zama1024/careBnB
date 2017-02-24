@@ -8,7 +8,8 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     if @booking.save
-      render :show
+      @bookings = current_user.bookings
+      render :index
     else
       render json: @booking.errors.full_messages, status: 422
     end

@@ -87,11 +87,9 @@ input:focus{
   left: 13px;
 }
 #map-container{
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   margin-top: 60px;
-  position: absolute;
-  top: 120px;
   margin: 10px;
   right: 0px;
   z-index: 1000;
@@ -228,6 +226,13 @@ h3{
   vertical-align: center;
   margin-left: 3%;
   height: 100%;
+}
+#bookings1{
+  display: flex;
+  flex-wrap: wrap;
+}
+#listingbookingwidth{
+  width: 25%;
 }
 
 #guestsrhs{
@@ -428,11 +433,11 @@ margin-right: 20px;
 
 #searchlhs{
   display: flex;
-  width: 50%;
+  width: 150%;
   float:left;
   align-items: flex-start;
   flex-flow: wrap;
-  height: 1000px;
+  overflow: scroll;
 }
 #footlhs {
   display: flex;
@@ -445,7 +450,7 @@ margin-right: 20px;
 }
 
 .list{
-  width: 355px;
+  width: 300px;
   height: 232px;
   margin-left: 10%;
 }
@@ -455,7 +460,7 @@ margin-right: 20px;
   /* the parent */
   .slick-list {
     margin: 0 -27px;
-    height: 350px;
+    height: 299px;
   }
 .homebox{
   font-family: "Noto sans", sans-serif;
@@ -542,11 +547,11 @@ input[type=submit] {
     color:white;
 }
 .listphoto{
-  width: 350px;
+  width: 290px;
   height: 200px;
 }
 .searchpagedivbox{
-  width: 50%;
+  width: 33%;
   flex-wrap: wrap;
   margin-left: 50px;
   margin-right: 50px;

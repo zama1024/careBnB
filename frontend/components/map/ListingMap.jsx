@@ -18,7 +18,7 @@ class ListingMap extends React.Component {
     }
     const mapOptions = {
      center: { lat: lat, lng: lng }, // this is SF
-     zoom: 13
+     zoom: 10
    };
    this.map = new google.maps.Map(this.mapNode, mapOptions);
    this.MarkerManager = new MarkerManager(this.map);
@@ -54,7 +54,7 @@ class ListingMap extends React.Component {
       }
       const mapOptions = {
         center: { lat: lat, lng: lng }, // this is SF
-        zoom: 13
+        zoom: 10
       };
       this.map.setOptions(mapOptions);
 
