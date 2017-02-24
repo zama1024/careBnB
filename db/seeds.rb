@@ -10,8 +10,8 @@ u1 = User.create!({email:"guest@email.com", password:"password", fname: "Joey", 
 u2 = User.create!({email:"rachel@email.com", password:"password", fname: "Rachel", lname:"Green", profile_pic_url: "http://pixel.nymag.com/imgs/daily/vulture/2014/12/17/17-rachel-green-jewish.w750.h560.2x.jpg"})
 u3 = User.create!({email:"ross@email.com", password:"password", fname: "Ross", lname:"Geller", profile_pic_url: "http://cdn.playbuzz.com/cdn/34c57547-2966-4c41-958d-bd8600a4d9ac/d6cb762e-5493-4e09-bd86-8137fc953d8d.jpg"})
 u4 = User.create!({email:"monica@email.com", password:"password", fname: "Monica", lname:"Geller", profile_pic_url: "http://images5.fanpop.com/image/photos/31600000/Monica-s-big-blue-eyes-monica-geller-31643935-500-375.jpg"})
-u4 = User.create!({email:"chandler@email.com", password:"password", fname: "Chandler", lname:"Bing", profile_pic_url: "http://az616578.vo.msecnd.net/files/2016/11/06/6361405415176770181565499140_chandler%20bing.jpg"})
-u4 = User.create!({email:"phoebe@email.com", password:"password", fname: "Phoebe", lname:"Buffay", profile_pic_url: "https://upload.wikimedia.org/wikipedia/en/f/f6/Friendsphoebe.jpg"})
+u5 = User.create!({email:"chandler@email.com", password:"password", fname: "Chandler", lname:"Bing", profile_pic_url: "http://az616578.vo.msecnd.net/files/2016/11/06/6361405415176770181565499140_chandler%20bing.jpg"})
+u6 = User.create!({email:"phoebe@email.com", password:"password", fname: "Phoebe", lname:"Buffay", profile_pic_url: "https://upload.wikimedia.org/wikipedia/en/f/f6/Friendsphoebe.jpg"})
 Listing.destroy_all
 l1 = Listing.create!({  title: "Beautiful house in a great city!",
   description: "Ielirev numeya secih ne. Pie zetuvas he tehalor tapac dat ale tepe otin ayunupoh? Seso noced reruyu yonot, icey ruv vibocer agaceg sosedi. Sen ahiset nesed ris pib wusosos! Lala riesa het ucos seyole ci. Pecuro dicenan gicot? Nira wesur siesisor ril edetuviw denile. Mewoci rime nideno mu tehehar rore pedoci baseri. Arihe da wenino esesitec tehire da gese gol, igo lir se elaye vewinir dilati mirota. Sabarep eworap cari enir alarawec acanag serisa.
