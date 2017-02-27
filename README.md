@@ -1,24 +1,56 @@
-# README
+# CareBNB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CareBNB is a clone of [Airbnb](http://www.airbnb.com) created by Farshid Zaman. It has the same features as Airbnb where a user can book homes/rooms for a given number of days in any city. One distinctive feature that CareBNB has is that a certain percentage of the rent(chosen by the host) will go towards charity. Take a look at it live at [http://care-bnb.herokuapp.com](http://www.care-bnb.herokuapp.com). Once signed up, a user can log in and create listings or book homes for their next vacation.
 
-Things you may want to cover:
+[Live Here][live]
 
-* Ruby version
+[live]: http://www.care-bnb.herokuapp.com
 
-* System dependencies
+## Features
 
-* Configuration
+* Authentication
+  * Session is authenticated in the backend. All queries return data that corresponds to the proper user.
+  * User can sign up and log in from any page in the app.
+* Create Listing
+  * User can create listings to rent out their rooms/apartments.
+* Book Listings
+  * User can book rooms/apartments in different cities.
+* Reviews on listings
+  * User can post reviews for different listings.
+* Search Listings
+  * User can search for rooms/apartments according to their needs.
+* Google map Integration
+  * Search process includes google map interaction for a better user experience
 
-* Database creation
+## Code Guide
 
-* Database initialization
+If you'd like to take a closer look at the code behind the CareBNB App, the best folders to look in are:
 
-* How to run the test suite
+* [care_bnb.jsx](./frontend/care_bnb.jsx)
+* [React components](./frontend/components)
+  * [App](./frontend/components/app.jsx)
+* [Rails controllers](./app/controllers/api)
+* [Flux Stores](./frontend/stores)
+* [Api Util](./frontend/util/api_util.js)
+* [DB Schema](./db/schema.rb)
+* [Rails Routes](./config/routes.rb)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Languages, Frameworks, Libraries, Etc.
 
-* Deployment instructions
+* Ruby on Rails
+* Javascript
+* PostgreSQL
+* React
+* Redux
+* jquery
+* Google Map API
+* Gems
+  * Paperclip
+  * Geocoder
+  * Jbuilder
+  * BCrypt
 
-* ...
+## Screenshots
+
+Home page:
+![home page](./screenshots/homepage.jpg)
