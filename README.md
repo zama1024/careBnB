@@ -54,11 +54,11 @@ If you'd like to take a closer look at the code behind the CareBNB App, the best
 
 ## Screenshots
 
+Listings Page
+![Listing show page](./app/assets/images/farshid-carebnb-listing.gif)
 Search Page
 ![search page](./app/assets/images/searchpage.png)
 Login Page
-![login page](./app/assets/images/login.png)
+![login page](./app/assets/images/loginpage.png)
 Host Sign Up Page
 ![SignUp page](./app/assets/images/createlisting.png)
-Listings Page
-![Listing show page](./app/assets/images/farshid-carebnb-listing.gif)
