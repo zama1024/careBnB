@@ -4,7 +4,7 @@ CareBNB is a clone of [Airbnb](http://www.airbnb.com) created by Farshid Zaman. 
 
 [Live Here][live]
 
-[live]: http://www.care-bnb.herokuapp.com
+[live]: http://www.carebnb.site
 
 ![home page](./app/assets/images/farshid-carebnb.gif)
 
@@ -59,6 +59,6 @@ Search Page
 Login Page
 ![login page](./app/assets/images/login.png)
 Host Sign Up Page
-![SignUp page](./app/assets/images/login.png)
+![SignUp page](./app/assets/images/newlisting.png)
 Listings Page
 ![Listing show page](./app/assets/images/showpage.png)
