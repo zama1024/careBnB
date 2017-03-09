@@ -30,10 +30,10 @@ class ReviewShow extends React.Component{
     let greystarNum = 5 - tealStarNum;
     let stars = [];
     for (var i = 0; i < tealStarNum; i++) {
-      stars.push(<img className={classname} src={window.tealstar} />);
+      stars.push(<img  key={stars.length} className={classname} src={window.tealstar} />);
     }
     for (var i = 0; i < greystarNum; i++) {
-      stars.push(<img className={classname} src={window.greystar} />);
+      stars.push(<img  key={stars.length} className={classname} src={window.greystar} />);
     }
     return stars;
   }
@@ -48,7 +48,7 @@ class ReviewShow extends React.Component{
 
   render(){
     let reviews = this.props.reviews;
-    let keys = Object.keys(reviews)
+    let keys = Object.keys(reviews);
     keys = keys.slice(0,keys.length - 1);
 
     if (!keys.length) {
@@ -87,10 +87,10 @@ class ReviewShow extends React.Component{
       valueRating += reviews[el].value_rating;
       let author = reviews[el].author;
       reviewsDesc.push(
-        <div>
+        <div key={i}>
           <div className="reviewsDesc">
             <div id="reviewimage">
-              <img src={author.profile_pic_url} />
+              <img key={author.id} src={author.profile_pic_url} />
               <span>{author.fname}</span>
 
             </div>

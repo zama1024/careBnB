@@ -62,7 +62,7 @@ class Search extends React.Component {
     listings = listings.slice(0,listings.length - 1).map(id =>
       this.props.listings[id]);
       let photos = listings.map(listing => (
-        <div className="searchpagedivbox">
+        <div key={listing.id} className="searchpagedivbox">
           <img key={listing.id} onClick={this.toShowPage(listing.id).bind(this)} className = "listphoto" src={listing.listing_photo_url}/>
           <div id="searchdivinfo">
             <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>

@@ -14,12 +14,12 @@ class MyBookings extends React.Component {
 
   render(){
     if(Object.keys(this.props.bookings.bookings).length === 0){
-      return <div>loading</div>;
+      return <div>No bookings yet</div>;
     }
     let listings = Object.keys(this.props.bookings.bookings).map(id => this.props.bookings.bookings[id].listing);
       let photos = listings.map(listing => {
       return (
-        <div className="searchpagedivbox">
+        <div key={listing.id} className="searchpagedivbox">
           <img key={listing.id} onClick={this.toShowPage(listing.id).bind(this)} className = "listphoto" src={listing.listing_photo_url}/>
           <div id="searchdivinfo">
             <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
@@ -30,7 +30,7 @@ class MyBookings extends React.Component {
             </div>
           </div>
         </div>
-      )});
+      );});
     return(
       <div>
         {photos}

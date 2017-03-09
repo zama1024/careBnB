@@ -56,7 +56,7 @@ class ListingForm extends React.Component{
       <div id="pagediv">
         <div id="holder">
           <div id="background">
-            <h1 id="backTag">Start your journey as a <h1 id="carebnb">{carebnb}</h1> host</h1>
+            <h1 id="backTag">Start your journey as a <span id="carebnb">{carebnb}</span> host</h1>
           </div>
 
         </div>
