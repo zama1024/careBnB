@@ -26,13 +26,17 @@ class Home extends React.Component {
     if(this.props.listings.length === 0){
       return <div>loading</div>;
     }
-    var settings = { dots: false, arrows: true, infinite: true, speed: 500, slidesToShow: 3, slidesToScroll: 1, adaptiveHeight: false};
+    var settings = { dots: false,
+      infinite: true,
+      speed: 200,
+      slidesToShow: 3,
+      slidesToScroll: 1, adaptiveHeight: false};
     let fakeof = "of";
     let fakefor = "for";
     let listings = this.props.listings.slice(0, this.props.listings.length -1);
 
     let photos = listings.map(listing => (
-      <div className="homebox">
+      <div key={listing.id} className="homebox">
         <img key={listing.id} onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>
         <div id="info">
           <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
@@ -46,7 +50,7 @@ class Home extends React.Component {
     ));
     let sorted = listings.slice().sort((a,b) => {return a.reviews.length > b.reviews.length;});
     let reviewSorted = sorted.map(listing => (
-      <div className="homebox">
+      <div key={listing.id} className="homebox">
         <img key={listing.id} onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>
         <div id="info">
           <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
