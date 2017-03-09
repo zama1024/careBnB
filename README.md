@@ -59,6 +59,6 @@ Search Page
 Login Page
 ![login page](./app/assets/images/login.png)
 Host Sign Up Page
-![SignUp page](./app/assets/images/newlisting.png)
+![SignUp page](./app/assets/images/createlisting.png)
 Listings Page
 ![Listing show page](./app/assets/images/showpage.png)
