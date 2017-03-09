@@ -53,4 +53,4 @@ If you'd like to take a closer look at the code behind the CareBNB App, the best
 ## Screenshots
 
 Home page:
-![home page](./screenshots/homepage.jpg)
+![home page](./app/assets/images/farshid-carebnb.gif)
