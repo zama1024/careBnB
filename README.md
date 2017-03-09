@@ -61,4 +61,4 @@ Login Page
 Host Sign Up Page
 ![SignUp page](./app/assets/images/createlisting.png)
 Listings Page
-![Listing show page](./app/assets/images/showpage.png)
+![Listing show page](./app/assets/images/farshid-carebnb-listing.gif)
