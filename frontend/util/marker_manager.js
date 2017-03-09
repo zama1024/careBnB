@@ -11,14 +11,6 @@ export default class MarkerManager {
     this._listingsToAdd().forEach(this._createMarkerFromListing.bind(this));
     this._markersToRemove(myListings).forEach(this._removeMarker.bind(this));
   }
-  // removeMarkers(listings){
-  //
-  //   this.markers.forEach(marker => {
-  //     if (!listings.some((listing) => {return parseInt(listing) === marker.listingId;})) {
-  //       marker.setMap(null);
-  //     }
-  //   });
-  // }
 
   _markersToRemove(listings) {
     const currentListings = listings.map((listing) => parseInt(listing));

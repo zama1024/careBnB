@@ -22,8 +22,28 @@ CareBNB is a clone of [Airbnb](http://www.airbnb.com) created by Farshid Zaman. 
 * Search Listings
   * User can search for rooms/apartments according to their needs.
 * Google map Integration
-  * Search process includes google map interaction for a better user experience
+  * Search process includes google map interaction which can create and remove markers based on search parameters.
 
+```
+  updateMarkers(listings) {
+    let myListings = Object.keys(listings);
+    myListings.pop();
+    this.listings = myListings.map(id => listings[id]);
+    this._listingsToAdd().forEach(this._createMarkerFromListing.bind(this));
+    this._markersToRemove(myListings).forEach(this._removeMarker.bind(this));
+  }
+
+  _markersToRemove(listings) {
+    const currentListings = listings.map((listing) => parseInt(listing));
+    return this.markers.filter(marker => !currentListings.includes(marker.listingId));
+  }
+
+  _removeMarker(marker) {
+    const idx = this.markers.indexOf(marker);
+    marker.setMap(null);
+    this.markers.splice(idx, 1);
+  }
+```
 ## Code Guide
 
 If you'd like to take a closer look at the code behind the CareBNB App, the best folders to look in are:
