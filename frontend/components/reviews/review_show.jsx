@@ -130,15 +130,12 @@ class ReviewShow extends React.Component{
         <h4 id="stargroup">{ratingStars}</h4>
         <hr></hr>
         <div id="summary" className="boxcontainer">
-          <div className="boxitem first">
-            Summary
-          </div>
-          <div className="boxitem middle">
+          <div className="boxitemReview">
             <span className="starItem">Accuracy:  {accuracyStars}</span>
             <span className="starItem">Communication: {communicationStars}</span>
             <span className="starItem">Cleanliness: {cleanlinessStars}</span>
           </div>
-          <div className="boxitem last">
+          <div className="boxitemReview">
             <span className="starItem">Check In:  {checkinStars}</span>
             <span className="starItem">Location: {locationStars}</span>
             <span className="starItem">Value:  {valueStars}</span>

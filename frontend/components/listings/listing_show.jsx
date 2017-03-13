@@ -12,12 +12,10 @@ class ListingShow extends React.Component {
   componentDidMount() {
     this.props.fetchListing(this.props.params.listingId);
     var bform = document.getElementById('bform');
-    debugger
     window.addEventListener('scroll', this.bformScroll);
   }
 
   componentWillUnmount(){
-    debugger
     window.removeEventListener('scroll', this.bformScroll, false);
   }
 
@@ -25,9 +23,11 @@ class ListingShow extends React.Component {
 
     let currentScrollPos = window.scrollY;
     var bform = document.getElementById('bform');
+    var footercontainer = document.getElementById('footermargin');
     if(bform && bform.getBoundingClientRect().top <= 1){
       $( "#bform" ).addClass( 'bformTop');
       $( "#bform" ).removeClass( 'bform');
+
     }
     var coverContainer = document.getElementById('coverContainer');
     if(coverContainer.getBoundingClientRect().bottom >= 52){
