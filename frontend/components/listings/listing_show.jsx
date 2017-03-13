@@ -118,7 +118,7 @@ class ListingShow extends React.Component {
             <div className="boxitem last">
               <span className="disblock">Check In:  <span className="val">{listing.check_in}</span> </span>
               <span className="disblock">Check_out:  <span className="val">{listing.check_out}</span></span>
-              <span className="disblock">Property Type:  <span className="val">{listing.property_type}</span></span>
+              <span className="disblock">Type:  <span className="val">{listing.property_type}</span></span>
               <span className="disblock">Room Type:  <span className="val">{listing.listing_type.split(" ")[0 ]}</span></span>
             </div>
           </div>
