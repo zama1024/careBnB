@@ -25,7 +25,6 @@ class SessionForm extends React.Component {
   }
 
   startUsernameAnimation(){
-     this.setState({email: '', password: ''});
 
      const demoName = 'guest@email.com';
      let emailID = setInterval(() => {
@@ -132,8 +131,8 @@ class SessionForm extends React.Component {
             id='password'
             value={this.state.password}
             onChange={this.update("password")}/>
-          <input type="submit" value={label}
-            className="button"/>
+          <input type="submit" value={label} className="button"/>
+          <div onClick={this.startUsernameAnimation.bind(this)} className="button">Demo</div>
         </div>
         <hr></hr>
         <div id="prompt">{prompt}</div>

@@ -3,7 +3,7 @@ class Api::SessionsController < ApplicationController
      @user = User.find_by_credentials(user_params)
      if @user
        log_in!(@user)
-       redirect_to '/'
+       render "api/users/show"
      else
        render json: { base: ["Invalid email/password"] }, status: 422
      end

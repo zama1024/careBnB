@@ -7,9 +7,33 @@ import BookingFormContainer from '../bookings/booking_form_container';
 class ListingShow extends React.Component {
   constructor(props){
     super(props);
+    this.state = {bformPos: 0};
   }
   componentDidMount() {
     this.props.fetchListing(this.props.params.listingId);
+    var bform = document.getElementById('bform');
+    debugger
+    window.addEventListener('scroll', this.bformScroll);
+  }
+
+  componentWillUnmount(){
+    debugger
+    window.removeEventListener('scroll', this.bformScroll, false);
+  }
+
+  bformScroll(){
+
+    let currentScrollPos = window.scrollY;
+    var bform = document.getElementById('bform');
+    if(bform && bform.getBoundingClientRect().top <= 1){
+      $( "#bform" ).addClass( 'bformTop');
+      $( "#bform" ).removeClass( 'bform');
+    }
+    var coverContainer = document.getElementById('coverContainer');
+    if(coverContainer.getBoundingClientRect().bottom >= 52){
+      $( "#bform" ).addClass( 'bform');
+      $( "#bform" ).removeClass( 'bformTop');
+    }
   }
 
   render() {
@@ -145,7 +169,7 @@ class ListingShow extends React.Component {
         </div>
         <div id="showrhs">
 
-          <div id="bform">
+          <div className="bform" id="bform">
 
             <BookingFormContainer listingId={listing.id} clearBookingErrors={this.props.clearBookingErrors} createBooking={this.props.createBooking} daily_rate={listing.daily_rate} service_fee={listing.service_fee}/>
           </div>

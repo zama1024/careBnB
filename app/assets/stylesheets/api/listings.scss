@@ -10,6 +10,7 @@
 }
 #wholepage{
   display: flex;
+  position: relative;
   margin-right: 10%;
 }
 .coverPhoto{
@@ -27,7 +28,6 @@ body {
 #coverContainer > img {
   position: relative;
   width: 100%;
-  height: 650px;
 }
 #showPageHeader {
   width: 60%;
@@ -145,13 +145,21 @@ body {
   top: 0px;
   right: 0px;
 }
-#bform{
+.bform{
   border-left: 1px solid #767676;
   border-right: 1px solid #767676;
   border-bottom: 1px solid #767676;
-  width: 60%;
+  width: 70%;
   position: absolute;
-  margin-top: -7.5%;
+  top: -53px;
+}
+.bformTop{
+  border-left: 1px solid #767676;
+  border-right: 1px solid #767676;
+  border-bottom: 1px solid #767676;
+  position: fixed;
+  width: 25.2%;
+  top: 0px;
 }
 
 #bulpoints{
@@ -210,9 +218,7 @@ body {
   padding-left: 15%;
   padding-bottom: 1%
 }
-#wholepage{
-  position: relative;
-}
+
 .headerLink{
   margin-top: 4%;
   padding-right: 3%;

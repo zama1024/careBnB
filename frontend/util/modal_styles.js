@@ -9,7 +9,7 @@ export const authModalStyle = {
  },
  content : {
    width           : '425px',
-   height          : '450px',
+   height          : '520px',
    margin          : '7vh auto'
  }
 };
