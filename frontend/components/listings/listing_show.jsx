@@ -30,7 +30,7 @@ class ListingShow extends React.Component {
 
     }
     var coverContainer = document.getElementById('coverContainer');
-    if(coverContainer.getBoundingClientRect().bottom >= 52){
+    if(coverContainer && coverContainer.getBoundingClientRect().bottom >= 52){
       $( "#bform" ).addClass( 'bform');
       $( "#bform" ).removeClass( 'bformTop');
     }

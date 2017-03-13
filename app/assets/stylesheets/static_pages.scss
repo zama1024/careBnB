@@ -160,8 +160,8 @@ input:focus{
   margin-right: 0px;
 }
 .pic img{
-  width: 175px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
 }
 #rhs{
   height: 100%;
@@ -324,9 +324,10 @@ h3{
   margin-top: 4%;
 }
 
-.slick-prev:after {
+
+.slick-prev:before {
 content: "<";
-color: grey;
+color: gray;
 font-size: 50px;
 margin-left: -500%;
 font-family: "Noto sans", sans-serif;
@@ -336,7 +337,7 @@ line-height: 0.5;
 .slick-next:before {
   font-family: "Noto sans", sans-serif;
 content: ">";
-color: grey;
+color: gray;
 font-size: 50px;
 margin-right: -500%;
 line-height: 0.5;
@@ -454,9 +455,8 @@ margin-right: 20px;
 }
 
 .list{
-  width: 300px;
-  height: 232px;
-  margin-left: 10%;
+  width: 100%;
+  height: 70%;
 }
 .slick-slide {
     margin: 0 27px;

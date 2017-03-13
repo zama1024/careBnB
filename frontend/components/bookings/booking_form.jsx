@@ -23,12 +23,14 @@ class BookingForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (!this.props.currentUser ) {
-      this.setState({error: "Please log in to make a booking"});
+      this.setState({errors: ["Please log in to make a booking"]});
       return null;
+    }else{
+
+      let booking = this.state;
+      delete booking.error;
+      this.props.createBooking(booking).fail( ({errors}) => {this.setState({ errors });}).then(() => {return hashHistory.push("/myBookings")});
     }
-    let booking = this.state;
-    delete booking.error;
-    this.props.createBooking(booking).fail( ({errors}) => {this.setState({ errors })}).then(() => {return hashHistory.push("/myBookings")});
 
   }
 
@@ -135,7 +137,10 @@ class BookingForm extends React.Component {
 
             <input className="book-button" type="submit" value="Book" />
           </div>
-          { this.state.errors.length > 0 ? this.state.errors[0] : null }
+          <div className="bookingerrors">
+
+            { this.state.errors.length > 0 ? this.state.errors[0] : null }
+          </div>
 
         </form>
 
