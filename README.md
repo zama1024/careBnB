@@ -1,6 +1,6 @@
 # CareBNB
 
-CareBNB is a clone of [Airbnb](http://www.airbnb.com) created by Farshid Zaman. It has the same features as Airbnb where a user can book homes/rooms for a given number of days in any city. One distinctive feature that CareBNB has is that a certain percentage of the rent(chosen by the host) will go towards charity. Take a look at it live at [http://care-bnb.herokuapp.com](http://www.care-bnb.herokuapp.com). Once signed up, a user can log in and create listings or book homes for their next vacation.
+CareBNB is a clone of [Airbnb](http://www.airbnb.com) created by Farshid Zaman. It has the same features as Airbnb where a user can book homes/rooms for a given number of days in any city. One distinctive feature that CareBNB has is that a certain percentage of the rent(chosen by the host) will go towards charity. Take a look at it live at [http://care-bnb.herokuapp.com](http://www.carebnb.site). Once signed up, a user can log in and create listings or book homes for their next vacation.
 
 [Live Here][live]
 
