@@ -39,13 +39,25 @@ class ListingShow extends React.Component {
   render() {
     const listing = this.props.listing;
     if (!listing) {
-      return <div>Loading...</div>;
+      return (
+        <div className="loader">
+          <img src={window.hourglass} />
+        </div>
+      );
       }
     if (!listing.host){
-      return <div>Loading...</div>;
+      return (
+        <div className="loader">
+          <img src={window.hourglass} />
+        </div>
+      );
     }
     if (!listing.reviews){
-      return <div>Loading...</div>;
+      return (
+        <div className="loader">
+          <img src={window.hourglass} />
+        </div>
+      );
     }
 
     return(

@@ -6,13 +6,13 @@ class Api::ListingsController < ApplicationController
       @listings = Listing.find_by_params(params[:searchParams])
       @map_center = Geocoder.coordinates(params[:searchParams][:address]) if params[:searchParams][:address] != ""
     else
-      @listings = Listing.all
+      @listings = Listing.all.includes(:reviews)
     end
     render :index
   end
 
   def show
-    @listing = Listing.find(params[:id])
+    @listing = Listing.includes(:reviews, :host).where('listings.id = ?', params[:id]).first
   end
 
   def create

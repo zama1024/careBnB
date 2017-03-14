@@ -24,7 +24,11 @@ class Home extends React.Component {
 
   render() {
     if(this.props.listings.length === 0){
-      return <div>loading</div>;
+      return (
+        <div className="loader">
+          <img src={window.hourglass} />
+        </div>
+      );
     }
     var settings = { dots: false,
       infinite: true,
@@ -76,7 +80,7 @@ class Home extends React.Component {
         <div className='homeinfocontainer'>
           <h3>Homes</h3>
           <Slider  {...settings}>
-            {photos}
+            {photos.length > 0 ? photos : null}
           </Slider>
         </div>
         <div>
@@ -86,7 +90,7 @@ class Home extends React.Component {
         <div className='homeinfocontainer'>
           <h3>Browse by review</h3>
           <Slider  {...settings}>
-            {reviewSorted}
+            {reviewSorted.length > 0 ? reviewSorted : null}
           </Slider>
         </div>
 

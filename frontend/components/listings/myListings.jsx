@@ -14,7 +14,11 @@ class MyListings extends React.Component {
 
   render(){
     if(Object.keys(this.props.listings).length === 0){
-      return <div>loading</div>;
+      return (
+        <div className="loader">
+          <img src={window.hourglass} />
+        </div>
+      );
     }
     let listings = Object.keys(this.props.listings);
     listings = listings.slice(0,listings.length - 1).map(id =>
