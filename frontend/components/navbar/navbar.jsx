@@ -67,7 +67,7 @@ class Nav extends React.Component {
     return (
       <div className="nav-container">
         <div id="logoContainer" className="" >
-          <Link to="/"><img id="vid" src={window.logo}></img></Link>
+          <a href="http://www.carebnb.site/#/"><img id="vid" src={window.logo}></img></a>
         </div>
         <div id="search">
           <input className="searchHidden" type="text" onChange={ this.search.bind(this) }/>

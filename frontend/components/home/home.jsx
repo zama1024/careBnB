@@ -45,7 +45,7 @@ class Home extends React.Component {
         <div id="info">
           <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
           <span id="infotitle">{listing.title}</span>
-          <div className="starcontainer">
+          <div className="starcontainer2">
             <img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} />
             <span>{listing.reviews ? listing.reviews.length : 0} Reviews</span>
           </div>
@@ -65,7 +65,7 @@ class Home extends React.Component {
         <div id="info">
           <span>${listing.daily_rate} {listing.property_type} · {listing.num_bedroom} beds</span>
           <span id="infotitle">{listing.title}</span>
-          <div className="starcontainer">
+          <div className="starcontainer2">
             <img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} />
             <span>{listing.reviews ? listing.reviews.length : 0} Reviews</span>
           </div>

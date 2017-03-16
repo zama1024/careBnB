@@ -57,6 +57,7 @@ class Search extends React.Component {
   }
 
   render(){
+    debugger
     if(this.state.fetching){
       return null;
     }
