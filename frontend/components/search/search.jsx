@@ -32,9 +32,14 @@ class Search extends React.Component {
     delete searchParams.fetching;
     this.props.fetchListings({searchParams}).then((listings) => {this.setState({fetching: false})});
   }
+
+  componentWillUnmount(){
+    $("input.searchShow" ).toggleClass( "searchHidden");
+    $("div.nav-container-border" ).toggleClass( "nav-container");
+  }
   handleSubmit(e){
     e.preventDefault();
-    this.props.fetchListings({searchParams: this.props.searchParams}).then((listings) => {this.setState({fetching: false})});
+    this.props.fetchListings({searchParams: this.props.searchParams}).then((listings) => {this.setState({fetching: false});});
   }
   updateValue(sliderState){
     this.setState({priceRange: [sliderState.values[0], sliderState.values[1]]}, () => {
@@ -82,7 +87,6 @@ class Search extends React.Component {
             <input className="date" type="date" onChange={this.update("checkIn").bind(this)} placeholder="Check In" />
             <input className="date" type="date"  onChange={this.update("checkOut").bind(this)}placeholder="Check Out" />
               <input type="number" onChange={this.update("guests").bind(this)} placeholder="Guests" />
-              <input type="text"  onChange={this.update("roomType").bind(this)}placeholder="Room type" />
               <div className="rheostat-container">
                 <span>Min Price: ${this.state.priceRange[0]}</span>
                 <Rheostat min={1} max={1000} values={[1, 1000]}  onValuesUpdated={this.updateValue.bind(this)}/>

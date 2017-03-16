@@ -1,5 +1,6 @@
 class Api::ListingsController < ApplicationController
   def index
+
     if params[:currentUser]
       @listings = current_user.listings
     elsif params[:searchParams]

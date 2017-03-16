@@ -12,7 +12,6 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = (dispatch) => ({
   logout: (currentUser) => dispatch(logout(currentUser)),
-  submitSearch: (searchParams) => dispatch(submitSearch(searchParams)),
   updateSearchParams: (searchParams) => dispatch(updateSearchParams(searchParams))
 });
 

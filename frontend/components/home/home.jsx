@@ -37,7 +37,7 @@ class Home extends React.Component {
       slidesToScroll: 1, adaptiveHeight: false};
     let fakeof = "of";
     let fakefor = "for";
-    let listings = this.props.listings.slice(0, this.props.listings.length -1);
+    let listings = this.props.listings.slice(0, 9);
 
     let photos = listings.map(listing => (
       <div key={listing.id} className="homebox">
@@ -47,12 +47,18 @@ class Home extends React.Component {
           <span id="infotitle">{listing.title}</span>
           <div className="starcontainer">
             <img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} />
-            <span>{listing.reviews.length} Reviews</span>
+            <span>{listing.reviews ? listing.reviews.length : 0} Reviews</span>
           </div>
         </div>
       </div>
     ));
-    let sorted = listings.slice().sort((a,b) => {return a.reviews.length > b.reviews.length;});
+    let sorted = listings.slice().sort((a,b) => {
+      if(a.reviews && b.reviews) {
+        return a.reviews.length > b.reviews.length;
+      }else{
+        return false;
+      }
+    });
     let reviewSorted = sorted.map(listing => (
       <div key={listing.id} className="homebox">
         <img key={listing.id} onClick={this.toShowPage(listing.id)} className = "list" src={listing.listing_photo_url}/>
@@ -61,7 +67,7 @@ class Home extends React.Component {
           <span id="infotitle">{listing.title}</span>
           <div className="starcontainer">
             <img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} /><img className="star" src={window.tealstar} />
-            <span>{listing.reviews.length} Reviews</span>
+            <span>{listing.reviews ? listing.reviews.length : 0} Reviews</span>
           </div>
         </div>
       </div>

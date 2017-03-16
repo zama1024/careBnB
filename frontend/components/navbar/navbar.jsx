@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory, replace } from 'react-router';
+import { hashHistory, replace, Link } from 'react-router';
 
 import Modal from 'react-modal';
 import { authModalStyle } from '../../util/modal_styles';
@@ -66,9 +66,8 @@ class Nav extends React.Component {
   sessionLinks() {
     return (
       <div className="nav-container">
-        <div id="logoContainer" className="" onClick={this.toHome.bind(this)}>
-          <img id="vid" src={window.logo}>
-          </img>
+        <div id="logoContainer" className="" >
+          <Link to="/"><img id="vid" src={window.logo}></img></Link>
         </div>
         <div id="search">
           <input className="searchHidden" type="text" onChange={ this.search.bind(this) }/>

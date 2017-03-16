@@ -13,8 +13,8 @@ class ListingMap extends React.Component {
       lng = this.props.listings.map_center[1];
     }else{
 
-      lat = 42.877742;
-      lng = -97.380979;
+      lat = 40.730610;
+      lng = -73.935242;
     }
     const mapOptions = {
      center: { lat: lat, lng: lng }, // this is SF

@@ -88,7 +88,7 @@ class ListingShow extends React.Component {
           <div id="bulpoints">
             <div id="sumtop">
               <h2 id="listingtitle">{listing.title}</h2>
-              <span id="city">{listing.city}, United States</span>
+              <span id="city">{listing.city}</span>
               <div className="rating">
                 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆ {listing.reviews.length}</span>
               </div>
