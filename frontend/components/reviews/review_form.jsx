@@ -35,7 +35,7 @@ class ReviewForm extends React.Component {
     let review = Object.assign({},this.state);
     delete review.error;
     this.props.createReview({review}).fail( ({errors}) => this.setState({errors}));
-    if (this.state.error.length < 1){
+    if (this.state.errors.length < 1){
 
       this.props.closeModal();
     }

@@ -86,7 +86,7 @@ class ReviewShow extends React.Component{
       checkinRating += reviews[el].checkin_rating;
       valueRating += reviews[el].value_rating;
       let author = reviews[el].author;
-      reviewsDesc.push(
+      reviewsDesc.unshift(
         <div key={i}>
           <div className="reviewsDesc">
             <div id="reviewimage">
