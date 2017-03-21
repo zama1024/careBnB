@@ -110,8 +110,8 @@ class ReviewShow extends React.Component{
       );
     }
 
-    let accuracyAvg = accuracyRating / keys.length;
     let communicationAvg = communicationRating / keys.length;
+    let accuracyAvg = accuracyRating / keys.length;
     let cleanlinessAvg = cleanlinessRating / keys.length;
     let locationAvg = locationRating / keys.length;
     let checkinAvg = checkinRating / keys.length;
