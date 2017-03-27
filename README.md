@@ -24,7 +24,7 @@ CareBNB is an Airbnb inspired web application created by Md Farshid Zaman. It ha
 * Google map Integration
   * Search process includes google map interaction which can create and remove markers based on search parameters.
 
-```
+```javascript
   updateMarkers(listings) {
     let myListings = Object.keys(listings);
     myListings.pop();
