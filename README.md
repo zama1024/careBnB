@@ -53,7 +53,7 @@ If you'd like to take a closer look at the code behind the CareBNB App, the best
   * [App](./frontend/components/app.jsx)
 * [Rails controllers](./app/controllers/api)
 * [Flux Stores](./frontend/stores)
-* [Api Util](./frontend/util/api_util.js)
+* [Api Util](./frontend/util/)
 * [DB Schema](./db/schema.rb)
 * [Rails Routes](./config/routes.rb)
 
