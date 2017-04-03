@@ -21,17 +21,17 @@ careBnB is a web application inspired by airBnB built using Ruby on Rails and Re
 * [Redux Structure](/docs/redux-structure.md)
 * [DB Schema](/docs/schema.md)
 
-##Implementation Timeline
+## Implementation Timeline
 
-###Phase 1: Backend setup and Front End User Authentication (2 days)
+### Phase 1: Backend setup and Front End User Authentication (2 days)
 
 **Objective:** Functioning rails project with front-end Authentication
 
-###Phase 2: Listing Model, API, and components (2 days)
+### Phase 2: Listing Model, API, and components (2 days)
 
 **Objective:** Listing belongs to a host(user) and can be created, and destroyed through the API.
 
-###Phase 3: Listings Search (2 Days)
+### Phase 3: Listings Search (2 Days)
 
 **Objective:** Users can search listings based on location. Search process incorporates google maps API.
 
