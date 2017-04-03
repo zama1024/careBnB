@@ -39,11 +39,11 @@ careBnB is a web application inspired by airBnB built using Ruby on Rails and Re
 
 **Objective:** Booking belongs to a listing and a user that can be created, read, edited and destroyed through the API.
 
-###Phase 4: Reviews (1 day)
+### Phase 4: Reviews (1 day)
 
 **Objective:** Review belongs to a listing and has a userId that can be created, read, edited and destroyed through the API.
 
-###Phase 5: - More CSS!(1 day)
+### Phase 5: - More CSS!(1 day)
 
 **Objective:** Add more css to make page look prettier
 
