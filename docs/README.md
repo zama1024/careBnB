@@ -1,4 +1,4 @@
-### CareBnB
+# CareBnB
 
 careBnB production link: http://care-bnb.herokuapp.com/
 
@@ -13,7 +13,7 @@ careBnB is a web application inspired by airBnB built using Ruby on Rails and Re
  - [ ] Google-map Integration
  - [ ] Production README sample
 
-##Design Docs
+## Design Docs
 
 * [Wireframes](/docs/wireFrames)
 * [React Components Hierarchy](/docs/component-hierarchy.md)
