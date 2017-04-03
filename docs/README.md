@@ -1,6 +1,6 @@
 # CareBnB
 
-careBnB production link: http://care-bnb.herokuapp.com/
+careBnB production link: http://www.carebnb.site/
 
 ## Minimum Viable Product
 
