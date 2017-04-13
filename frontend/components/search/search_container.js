@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Search from './search';
 import {updateSearchParams} from "../../actions/search_actions";
+import {fetchListings} from "../../actions/listing_actions";
 const mapStateToProps = (state, ownProps) => {
   return {
     listings: state.listings,
