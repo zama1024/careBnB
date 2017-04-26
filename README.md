@@ -10,7 +10,7 @@ CareBNB is an Airbnb inspired web application created by Md Farshid Zaman. It ha
 
 ## Features
 
-* Authentication
+* Authenticatio
   * Session is authenticated in the backend. All queries return data that corresponds to the proper user.
   * User can sign up and log in from any page in the app.
 * Create Listing
