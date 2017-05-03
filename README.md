@@ -4,7 +4,7 @@ CareBNB is an Airbnb inspired web application created by Md Farshid Zaman. It ha
 
 [Live Here][live]
 
-[live]: http://www.carebnb.site
+[live]: http://www.carebnb.sit
 
 ![home page](./app/assets/images/farshid-carebnb.gif)
 
