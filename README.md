@@ -74,7 +74,7 @@ If you'd like to take a closer look at the code behind the CareBNB App, the best
 
 ## Screenshots
 
-Listings Page
+Listings
 
 ![Listing show page](./app/assets/images/farshid-carebnb-listing.gif)
 
