@@ -17,7 +17,7 @@ CareBNB is an Airbnb inspired web application created by Md Farshid Zaman. It ha
   * User can create listings to rent out their rooms/apartments.
 * Book Listings
   * User can book rooms/apartments in different cities.
-* Reviews on listing
+* Reviews on listings
   * User can post reviews for different listings.
 * Search Listings
   * User can search for rooms/apartments according to their needs.
