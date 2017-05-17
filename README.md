@@ -46,7 +46,7 @@ CareBNB is an Airbnb inspired web application created by Md Farshid Zaman. It ha
 ```
 ## Code Guide
 
-If you would like to take a closer look at the code behind the CareBNB App, the best folders to look in are:
+If you would like to take a closer look at the code behind the CareBnB App, the best folders to look in are:
 
 * [care_bnb.jsx](./frontend/care_bnb.jsx)
 * [React components](./frontend/components)
