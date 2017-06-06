@@ -25,7 +25,7 @@ careBnB is a web application inspired by Airbnb built using Ruby on Rails and Re
 
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-**Objective:** Functioning rails project with front-end Authentication
+**Objective:** Functioning Rails project with front-end Authentication
 
 ### Phase 2: Listing Model, API, and components (2 days)
 
