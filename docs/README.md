@@ -1,6 +1,6 @@
 # CareBnB
 
-CareBnB production link: http://www.carebnb.site/
+Carebnb production link: http://www.carebnb.site/
 
 ## Minimum Viable Product
 
