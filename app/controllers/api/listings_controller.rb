@@ -7,7 +7,7 @@ class Api::ListingsController < ApplicationController
       @listings = Listing.find_by_params(params[:searchParams])
       @map_center = Geocoder.coordinates(params[:searchParams][:address]) if params[:searchParams][:address] != ""
     else
-      @listings = Listing.all.includes(:reviews)
+      @listings = Listing.limit(14).includes(:reviews)
     end
     render :index
   end

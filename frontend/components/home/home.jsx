@@ -27,9 +27,7 @@ class Home extends React.Component {
   render() {
     if(this.props.listings.length === 0){
       return (
-        <div className="loader">
-          <img src={window.hourglass} />
-        </div>
+        <div className="loader"></div>
       );
     }
     var settings = { dots: false,
