@@ -15,6 +15,8 @@ input:focus{
 .rheostat-container span{
   margin-left: 4%;
   margin-right: 4%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 .rheostat-horizontal {
   height: 24px;
@@ -399,7 +401,7 @@ margin-right: 20px;
   font-size: 40px;
   padding-left: 12%;
   padding-bottom: 4%;
-  font-weight: bolder;
+  font-weight: 100;
   padding-top: 5%;
   text-align: left;
 }
@@ -441,6 +443,7 @@ margin-right: 20px;
 .SecItem{
   color: grey;
   font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 .SecHead{
   color: black;
@@ -501,7 +504,8 @@ margin-right: 20px;
 #infotitle{
   font-family: "Roboto", sans-serif;
   font-size: 17px;
-  color: 484848;
+  color: #484848;
+  font-weight: 100;
   display: block;
     -webkit-font-smoothing: antialiased;
 }
