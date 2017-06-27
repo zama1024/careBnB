@@ -8,7 +8,9 @@ import Slider from 'react-slick';
 class Home extends React.Component {
   componentDidMount(){
     $("input.searchShow" ).toggleClass( "searchHidden", true);
+    $("input.searchHidden" ).toggleClass( "searchShow", false);
     $("div.nav-container-border" ).toggleClass( "nav-container", true);
+    $("div.nav-container" ).toggleClass( "nav-container-border", false);
     this.props.fetchListings();
   }
 
