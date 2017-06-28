@@ -7,6 +7,16 @@ input:focus{
   padding-left: 8%;
   padding-right: 8%;
 }
+
+.iconfooter img{
+  width: 50px;
+  height: 50px;
+}
+.footericons{
+  list-style: none;
+  display: flex;
+}
+
 .rheostat-container{
   width: 100%;
   display: flex;
@@ -16,7 +26,6 @@ input:focus{
   margin-left: 4%;
   margin-right: 4%;
   font-family: "Roboto", sans-serif;
-  font-weight: 100;
 }
 .rheostat-horizontal {
   height: 24px;
@@ -437,6 +446,7 @@ margin-right: 20px;
   width: 100%;
   align-items: center;
   align-content: space-around;
+  background: linear-gradient(45deg, #484848, rgba(62, 148, 177, 0.9) 50%, rgba(60, 63, 64, 0.9) 95%);
 }
 .FooterSec{
   padding-right: 10%;

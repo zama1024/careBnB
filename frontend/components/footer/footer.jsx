@@ -12,49 +12,17 @@ class Footer extends React.Component {
         <hr></hr>
         <div className="footercontainer">
           <section className="FooterSec">
-            <div id="dropdown">
-              <select className="country-selector">
-                <option id="America">America</option>
-                <option>Canada</option>
-                <option>England</option>
-                <option>India</option>
-                <option>China</option>
-                <option>Turkey</option>
-                <option>France</option>
-              </select>
-              <select className="country-selector">
-                <option>USD</option>
-                <option>AUS</option>
-                <option>GBP</option>
-              </select>
-            </div>
+            <section id="footer">
+            	<ul className="footericons">
+                <li><a target="_blank" href="https://www.linkedin.com/in/fzee23/" className="iconfooter"><img src={window.linkedin} className="label" /></a></li>
+            	  <li><a target="_blank" href="https://github.com/zama1024" className="iconfooter"><img src={window.github} className="label" /></a></li>
+            	  <li><a target="_blank" href="mailto:mdfarshidzaman@gmail.com" className="iconfooter"><img src={window.email} className="label" /></a></li>
+            	</ul>
+              <ul className="footericons">
+            	 <li>&copy; Md Farshid Zaman</li><li>Email: <a href="mailto:mdfarshidzaman@gmail.com">mdfarshidzaman@gmail.com</a></li>
+              </ul>
+            </section>
           </section>
-          <div id="footlhs">
-
-            <section id="firstsec" className="FooterSec">
-              <h3 className="SecHead">CareBnB</h3>
-              <li className="SecItem">About</li>
-              <li className="SecItem">Help</li>
-              <li className="SecItem">FAQ</li>
-            </section>
-            <section className="FooterSec">
-              <h3 className="SecHead">Hosting</h3>
-              <li className="SecItem">Why Host</li>
-              <li className="SecItem">Hospitability</li>
-              <li className="SecItem">Tips</li>
-            </section>
-            <section className="FooterSec">
-              <h3 className="SecHead">Creator</h3>
-              <li className="SecItem">Github</li>
-              <li className="SecItem">LinkedIn</li>
-              <li className="SecItem">Facebook</li>
-            </section>
-          </div>
-        </div>
-        <div id="verybot">
-          <hr></hr>
-          <span id="inc" className="SecItem">© CareBnB, Inc.</span>
-          <span id="terms" className="SecItem">Terms & PrivacySite</span>
         </div>
       </div>
     );
