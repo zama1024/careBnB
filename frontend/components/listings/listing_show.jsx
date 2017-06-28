@@ -41,21 +41,19 @@ class ListingShow extends React.Component {
     if (!listing) {
       return (
         <div className="loader">
-          <img src={window.hourglass} />
         </div>
       );
       }
     if (!listing.host){
       return (
         <div className="loader">
-          <img src={window.hourglass} />
+
         </div>
       );
     }
     if (!listing.reviews){
       return (
         <div className="loader">
-          <img src={window.hourglass} />
         </div>
       );
     }

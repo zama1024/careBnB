@@ -15,6 +15,23 @@ input:focus{
 .footericons{
   list-style: none;
   display: flex;
+  margin: 2% auto;
+  padding: 0;
+}
+.footericons li{
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  color: white;
+  display: inline;
+}
+
+.footerlogos{
+  padding-left: 29%;
+}
+
+.footericons a {
+  color: white;
+  text-decoration: none;
 }
 
 .rheostat-container{
@@ -446,12 +463,11 @@ margin-right: 20px;
   width: 100%;
   align-items: center;
   align-content: space-around;
-  background: linear-gradient(45deg, #484848, rgba(62, 148, 177, 0.9) 50%, rgba(60, 63, 64, 0.9) 95%);
+  background: linear-gradient(45deg, #484848, #145187 50%, rgba(60, 63, 64, 0.9) 95%);
 }
 .FooterSec{
-  padding-right: 10%;
   list-style: none;
-  margin-left: 10%;
+  margin: 0 auto;
 }
 #inc{
   padding-left: 10%;

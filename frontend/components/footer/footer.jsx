@@ -9,17 +9,16 @@ class Footer extends React.Component {
       };
     return(
       <div id = "footermargin">
-        <hr></hr>
         <div className="footercontainer">
           <section className="FooterSec">
             <section id="footer">
-            	<ul className="footericons">
+            	<ul className="footericons footerlogos">
                 <li><a target="_blank" href="https://www.linkedin.com/in/fzee23/" className="iconfooter"><img src={window.linkedin} className="label" /></a></li>
             	  <li><a target="_blank" href="https://github.com/zama1024" className="iconfooter"><img src={window.github} className="label" /></a></li>
             	  <li><a target="_blank" href="mailto:mdfarshidzaman@gmail.com" className="iconfooter"><img src={window.email} className="label" /></a></li>
             	</ul>
               <ul className="footericons">
-            	 <li>&copy; Md Farshid Zaman</li><li>Email: <a href="mailto:mdfarshidzaman@gmail.com">mdfarshidzaman@gmail.com</a></li>
+            	 <li>&copy; Md Farshid Zaman     Email: <a href="mailto:mdfarshidzaman@gmail.com">mdfarshidzaman@gmail.com</a></li> 
               </ul>
             </section>
           </section>
