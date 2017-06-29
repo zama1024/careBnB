@@ -18,7 +18,8 @@ class Footer extends React.Component {
             	  <li><a target="_blank" href="mailto:mdfarshidzaman@gmail.com" className="iconfooter"><img src={window.email} className="label" /></a></li>
             	</ul>
               <ul className="footericons">
-            	 <li>&copy; Md Farshid Zaman     Email: <a href="mailto:mdfarshidzaman@gmail.com">mdfarshidzaman@gmail.com</a></li> 
+            	 <li>&copy; Md Farshid Zaman &nbsp; Email: <a href="mailto:mdfarshidzaman@gmail.com">mdfarshidzaman@gmail.com</a></li>
+            	 <li>&nbsp; Portfolio: <a href="http://www.farshidzaman.tech">www.farshidzaman.tech</a></li>
               </ul>
             </section>
           </section>
