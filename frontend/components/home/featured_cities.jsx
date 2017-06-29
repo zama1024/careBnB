@@ -22,12 +22,12 @@ class FeaturedCities extends React.Component {
       <div className='container'>
         <h3>Featured Cities</h3>
         <Slider classname="slider"{...settings}>
-          <div className="pic" onClick={this.goTo("rome").bind(this)}><img className="city" src={window.rome} />Rome</div>
-          <div className="pic" onClick={this.goTo("paris").bind(this)}><img className="city" src={window.paris} />Paris</div>
-          <div className="pic" onClick={this.goTo("mumbai").bind(this)}><img className="city" src={window.mumbai} />Mumbai</div>
-          <div className="pic" onClick={this.goTo("london").bind(this)}><img className="city" src={window.london} />London</div>
-          <div className="pic" onClick={this.goTo("amsterdam").bind(this)}><img className="city" src={window.amsterdam} />Amsterdam</div>
-          <div className="pic" onClick={this.goTo("barcelona").bind(this)}><img className="city" src={window.barcelona} />Barcelona</div>
+          <div className="pic" onClick={this.goTo("rome").bind(this)}><img className="city" src={window.rome} /></div>
+          <div className="pic" onClick={this.goTo("paris").bind(this)}><img className="city" src={window.paris} /></div>
+          <div className="pic" onClick={this.goTo("mumbai").bind(this)}><img className="city" src={window.mumbai} /></div>
+          <div className="pic" onClick={this.goTo("london").bind(this)}><img className="city" src={window.london} /></div>
+          <div className="pic" onClick={this.goTo("amsterdam").bind(this)}><img className="city" src={window.amsterdam} /></div>
+          <div className="pic" onClick={this.goTo("barcelona").bind(this)}><img className="city" src={window.barcelona} /></div>
         </Slider>
       </div>
     );
