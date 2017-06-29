@@ -33,7 +33,7 @@ class Home extends React.Component {
     var settings = { dots: false,
       infinite: true,
       speed: 200,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 1, adaptiveHeight: false};
     let fakeof = "of";
     let fakefor = "for";
