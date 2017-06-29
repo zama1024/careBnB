@@ -146,7 +146,7 @@ class ReviewShow extends React.Component{
         </div>
         <div id= "buttonholder">
           <h3>Want to leave a Review?</h3>
-          <div id="reviewbutton" onClick={this.openModal.bind(this)}>Leave a Review</div>
+          <div id="reviewbutton" onClick={this.openModal.bind(this)}>Review</div>
         </div>
         <Modal isOpen={this.state.showModal}
           onRequestClose={this.closeModal.bind(this)}
