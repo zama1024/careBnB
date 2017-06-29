@@ -157,7 +157,7 @@ l6 = Listing.create!({  title: "Room for three in Rome",
   weekly_discount: 10,
   monthly_discount: 15
   })
-l7 = Listing.create!({  title: "Great apartment for tourists in paris",
+l7 = Listing.create!({  title: "Great tourist apartment in Paris",
   description: listingDescription.sample,
   host_id: u1.id,
   lat: 48.864716,
