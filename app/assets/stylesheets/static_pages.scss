@@ -4,6 +4,11 @@ input:focus{
 .homebox:hover .list{
   transform: scale(1.1);
 }
+
+.searchpagedivbox:hover .listphoto{
+  transform: scale(1.05);
+}
+
 .rheostat{
   margin-top: 2.5%;
   width: 35%;
@@ -531,6 +536,10 @@ margin-right: 20px;
   cursor: pointer;
   transition: all 0.5s ease;
   display: block;
+}
+
+.listphoto{
+  transition: all 0.3s ease;
 }
 .slick-slide {
     margin: 0 27px;
