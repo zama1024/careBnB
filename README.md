@@ -60,7 +60,7 @@ If you would like to take a closer look at the code behind the CareBnB App, the 
 ## Languages, Frameworks, Libraries, Etc.
 
 * Ruby on Rails
-* Javascript
+* JavaScript
 * PostgreSQL
 * React
 * Redux
