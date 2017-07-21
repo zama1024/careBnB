@@ -65,7 +65,7 @@ If you would like to take a closer look at the code behind the CareBnB App, the 
 * React
 * Redux
 * jquery
-* Google Map API
+* Google Maps API
 * Gems
   * Paperclip
   * Geocoder
