@@ -43,7 +43,7 @@ careBnB is a web application inspired by Airbnb built using Ruby on Rails and Re
 
 **Objective:** Review belongs to a listing and has a userId that can be created, read, edited and destroyed through the API.
 
-### Phase 5: - More CSS!(1 day)
+### Phase 5: - More CSS(1 day)
 
 **Objective:** Add more css to make page look prettier
 
