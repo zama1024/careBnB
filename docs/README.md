@@ -45,7 +45,7 @@ CareBnB is a web application inspired by Airbnb and built using Ruby on Rails an
 
 ### Phase 5: - More CSS(1 day)
 
-**Objective:** Add more css to make page look prettier
+**Objective:** Add more css to make page look prettier.
 
 ### Bonus Features (TBD)
 
