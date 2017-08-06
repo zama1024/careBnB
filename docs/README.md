@@ -4,7 +4,7 @@ Carebnb production link: http://www.carebnb.site/
 
 ## Minimum Viable Product
 
-CareBnB is a web application inspired by Airbnb built using Ruby on Rails and React/Redux. Even though the main idea is same as Airbnb, the only difference is that a portion(decided by the host) of the rent will go towards charity(decided by the guest). By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
+CareBnB is a web application inspired by Airbnb and built using Ruby on Rails and React/Redux. Even though the main idea is same as Airbnb, the only difference is that a portion(decided by the host) of the rent will go towards charity(decided by the guest). By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
  - [ ] Hosting on Heroku
  - [ ] New account creation, login, and guest/demo login
