@@ -48,4 +48,5 @@ listing_id    | integer   | not null, foreign key (references listings), indexed
 rating        | integer   | not null
 communication_rating        | integer   | not null
 accuracy_rating        | integer   | not null
+cleanliness_rating        | integer   | not null
 body          | text      | not null
