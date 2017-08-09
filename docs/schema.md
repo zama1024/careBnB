@@ -49,4 +49,5 @@ rating        | integer   | not null
 communication_rating        | integer   | not null
 accuracy_rating        | integer   | not null
 cleanliness_rating        | integer   | not null
+location_rating        | integer   | not null
 body          | text      | not null
