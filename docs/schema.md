@@ -46,4 +46,5 @@ id            | integer   | not null, primary key
 author_id     | integer   | not null, foreign key (references users), indexed
 listing_id    | integer   | not null, foreign key (references listings), indexed
 rating        | integer   | not null
+communication_rating        | integer   | not null
 body          | text      | not null
