@@ -17,7 +17,8 @@ column name   | data type | details
 --------------|-----------|-----------------------
 id            | integer   | not null, primary key
 host_id       | integer   | not null, foreign key (references users), indexed
-title         | string    | not null
+max_guests       | integer   | not null
+title         | string    | not null
 description   | text      | not null
 lat           | float     | not null
 lng           | float     | not null
