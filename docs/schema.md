@@ -19,6 +19,7 @@ id            | integer   | not null, primary key
 host_id       | integer   | not null, foreign key (references users), indexed
 max_guests       | integer   | not null
 num_bedroom       | integer   | not null
+listing_beds       | integer   | not null
 title         | string    | not null
 description   | text      | not null
 lat           | float     | not null
