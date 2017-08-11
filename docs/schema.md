@@ -21,6 +21,7 @@ max_guests       | integer   | not null
 num_bedroom       | integer   | not null
 listing_beds       | integer   | not null
 num_bathroom       | integer   | not null
+service_fee       | integer   | not null,
 title         | string    | not null
 description   | text      | not null
 lat           | float     | not null
