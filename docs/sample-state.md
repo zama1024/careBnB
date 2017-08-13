@@ -49,7 +49,8 @@
       authorId: 1,
       listingId: 1,
       rating: 5,
-      body: "Awesome Listing!"
+      body: "Awesome Listing!",
+      cleanliness_rating: 4
     }
   },
 }
