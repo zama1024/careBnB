@@ -55,5 +55,6 @@ communication_rating        | integer   | not null
 accuracy_rating        | integer   | not null
 cleanliness_rating        | integer   | not null
 checkin_rating        | integer   | not null
+value_rating        | integer   | not null
 location_rating        | integer   | not null
 body          | text      | not null
