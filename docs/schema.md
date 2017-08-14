@@ -27,6 +27,7 @@ description   | text      | not null
 lat           | float     | not null
 lng           | float     | not null
 daily_rate    | integer   | not null
+weekly_discount        | integer   | not null
 donation_%    | integer   | not null
 address       | string    | not null
 city          | string    | not null
