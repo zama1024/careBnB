@@ -64,7 +64,7 @@ If you would like to take a closer look at the code behind the Carebnb App, the 
 * PostgreSQL
 * React
 * Redux
-* jquery
+* jQuery
 * Google Maps API
 * Gems
   * Paperclip
