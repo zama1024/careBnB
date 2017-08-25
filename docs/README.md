@@ -1,4 +1,4 @@
-# CareBnB
+# Carebnb
 
 Carebnb production link: http://www.carebnb.site/
 
