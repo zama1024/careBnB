@@ -22,7 +22,7 @@ Carebnb is an Airbnb inspired web application created by Md Farshid Zaman. It ha
 * Search Listings
   * User can search for rooms/apartments according to their needs.
 * Google map Integration
-  * Search process includes google map interaction which can create and remove markers based on search parameters.
+  * Search process includes google maps interaction which can create and remove markers based on search parameters.
 
 ```javascript
   updateMarkers(listings) {
